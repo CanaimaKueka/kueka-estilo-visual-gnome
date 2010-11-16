@@ -1,72 +1,15 @@
-Source: canaima-integracion
+Source: canaima-estilo-visual
 Section: misc
 Priority: optional
-Maintainer: Equipo de Desarrollo de Canaima GNU/Linux <canaima@canaima.softwarelibre.gob.ve>
-Uploaders: José Miguel Parrella Romero <jparrella@onuva.com>, Carlos David Marrero <cdmarrero2040@gmail.com>, Orlando Andrés Fiol Carballo <ofiol@indesoft.org.ve>, Carlos A. Guerrero M. <guerrerocarlos@gmail.com>, Diego Aguilera <diegoaguilera85@gmail.com>
+Maintainer: Equipo de Desarrollo de Canaima GNU/Linux <desarrolladores@canaima.softwarelibre.gob.ve>
+Uploaders: Carlos A. Guerrero M. <guerrerocarlos@gmail.com>, Diego A. Aguilera Z. <diegoaguilera85@gmail.com>, Luis A. Martínez F. <martinez.faneyth@gmail.com>, Francisco J. Vásquez G. <franjvasquezg@gmail.com>
 Build-Depends: debhelper, cdbs
 Standards-Version: 3.7.3
 Homepage: http://canaima.softwarelibre.gob.ve/
 
-Package: canaima-acerca
-Architecture: all
-Depends: python, python-gtk2, python-gobject, python-gnome2, python-cairo
-Description: Menú Acerca De Canaima
- Este paquete provee el menú "Acerca de Canaima" sobre Canaima GNU/Linux.
-
-Package: canaima-base
-Architecture: all
-Depends: canaima-chat, canaima-bienvenido, canaima-acerca, canaima-estilo-visual, canaima-llaves, canaima-accesibilidad
-Description: Archivos base de Canaima GNU/Linux
- Este paquete provee los archivos base de Canaima GNU/Linux.
-
-Package: canaima-base-magallanes
-Architecture: all
-Replaces: canaima-base
-Depends: canaima-acerca, canaima-estilo-visual, canaima-llaves, canaima-accesibilidad
-Description: Archivos base de Canaima GNU/Linux
- Este paquete provee los archivos base de Canaima GNU/Linux para las portatil Canaima
-
 Package: canaima-estilo-visual
 Architecture: all
-Depends: gdm | gdm3, gconf2, canaima-estilo-visual-iconos,canaima-plymouth
+Depends: gdm3, gconf2, canaima-estilo-visual-iconos, canaima-plymouth
 Description: Estilo visual de Canaima GNU/Linux
  Este paquete provee el estilo visual (temas de GDM, Gnome y Grub)
  de Canaima GNU/Linux. También provee un tema de Splashy.
-
-Package: canaima-estilo-visual-iconos
-Architecture: all
-Replaces: canaima-estilo-visual (<< 2.0.5)
-Description: Estilo visual de Canaima GNU/Linux
- Este paquete provee los iconos para el estilo visual
- de Canaima GNU/Linux.
-
-Package: canaima-llaves
-Architecture: all
-Description: Llaves PGP de los repositorios de Canaima GNU/Linux
- Este paquete provee las llaves PGP de los repositorios
- de Canaima GNU/Linux 2.0.
-
-Package: canaima-accesibilidad
-Architecture: all
-Depends: gnome-orca, gok, dasher, gnome-accessibility, gnome-accessibility-themes 
-Description: Metapaquete para aplicaciones de Accesibilidad en Canaima GNU/Linux
- Este paquete provee las dependencias necesarias para incorporar
- soporte de accesibilidad en Canaima GNU/Linux.
-
-Package: canaima-chat
-Architecture: all
-Depends: xchat, pidgin
-Description: Metapaquete para la comunicación por chat de la comunidad de Canaima GNU/Linux
- Este paquete facilita la integración de los nuevos integrantes de la comunidad
- de Canaima GNU/Linux, mediante el acceso al Chat por IRC de el canal #canaima
- en irc.freenode.net. Implementando un icono en el escritorio.
-
-Package: canaima-bienvenido
-Architecture: all
-Depends: python 
-Section: misc
-Priority: optional
-Description: Canaima bienvenido de Canaima GNU/Linux
- Este paquete contiene el video ejecutado luego del splash
- y la aplicación canaima-bienvenido.
-
