@@ -6,7 +6,6 @@ ARCHIVOS="/etc/grub.d/10_linux \
 /usr/lib/mime/packages/openoffice.org-writer \
 /usr/lib/mime/packages/openoffice.org-calc \
 /usr/lib/mime/packages/openoffice.org-impress \
-/usr/share/themes/Clearlooks/gtk-2.0/gtkrc \
 /usr/share/applications/amsn.desktop \
 /usr/share/applications/freemind.desktop \
 /usr/share/applications/htop.desktop \
@@ -42,21 +41,24 @@ case "$1" in
 	
 	install)
 
-    if [ ! -e /var/lib/$PKG/diverts ]
-    then
-      mkdir -p /var/lib/$PKG/diverts
-    fi
+		if [ ! -e /var/lib/${PKG}/diverts ]
+		then
 
-    for archivo in  ${ARCHIVOS}
-    do
-	if [ -e $archivo ] 
-	then
-	      BASE=`basename $archivo`
-	      dpkg-divert --package $PKG --add --rename \
-	                  --divert /var/lib/$PKG/diverts/$BASE $archivo
-	fi
-    done
+			mkdir -p /var/lib/${PKG}/diverts
 
+		fi
 
-  ;;
+		for archivo in ${ARCHIVOS}
+		do
+
+			if [ -e $archivo ] 
+			then
+
+				BASE=`basename $archivo`
+				dpkg-divert --package ${PKG} --add --rename \
+					--divert /var/lib/${PKG}/diverts/$BASE $archivo
+			fi
+		done
+
+	;;
 esac

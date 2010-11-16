@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Canaima</name>
+  <name>canaima-metacity</name>
   <author>Xavier Araque - ONUVA (xavieraraque@gmail.com, xaraque@onuva.com</author>
   <copyright>none</copyright>
   <date>02 de Noviembre de 2008</date>
-  <description>Tema de ventanas Metacity para la Distribución Canaima 
-- CNTI</description>
+  <description>Tema de ventanas Metacity para la Distribución Canaima</description>
 </info>
 
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
@@ -213,7 +212,7 @@ x2="width-6" y2="height-1"/>
 </draw_ops>
 
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-<!--   Definir como usar el draw_ops para dibujar las ventanas y cuadros.
+<!--   Definir como usar el draw_ops para dibujar las ventanas y cuadros. -->
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
 <frame_style name="normal_focused" geometry="normal">

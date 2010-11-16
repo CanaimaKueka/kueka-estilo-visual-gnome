@@ -1,7 +1,7 @@
 /apps/nautilus/preferences/always_use_browser true
 
-/apps/metacity/general/theme Canaima
-/desktop/gnome/interface/gtk_theme Clearlooks
+/apps/metacity/general/theme canaima-metacity
+/desktop/gnome/interface/gtk_theme canaima-gtk
 /desktop/gnome/interface/icon_theme canaima-iconos
 /desktop/gnome/peripherals/mouse/cursor_theme canaima-cursores
 

@@ -20,8 +20,7 @@ install:
 	cp -r gtk/canaima-gtk $(DESTDIR)/usr/share/themes/
 
 	mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual/
-	mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual/desktop-enlaces/
-	cp -r desktop-enlaces/* $(DESTDIR)/usr/share/canaima-estilo-visual/desktop-enlaces/
+	cp -r desktop-enlaces $(DESTDIR)/usr/share/canaima-estilo-visual/
 	cp -r images/* $(DESTDIR)/usr/share/canaima-estilo-visual/
 
 	mkdir -p $(DESTDIR)/etc/grub.d/

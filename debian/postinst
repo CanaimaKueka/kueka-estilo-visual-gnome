@@ -1,36 +1,49 @@
 #!/bin/sh -e
 
-#
-# canaima-estilo-visual.postinst -- instala el Estilo Visual de Canaima GNU/Linux
-#   (C) 2008 José Miguel Parrella Romero <jparrella@onuva.com>
-#
-# Esto es Software Libre bajo la Licencia Pública General GNU
-#
+ARCHIVOS="/etc/grub.d/10_linux \
+/etc/grub.d/05_debian_theme \
+/usr/lib/mime/packages/openoffice.org-writer \
+/usr/lib/mime/packages/openoffice.org-calc \
+/usr/lib/mime/packages/openoffice.org-impress \
+/usr/share/applications/amsn.desktop \
+/usr/share/applications/freemind.desktop \
+/usr/share/applications/htop.desktop \
+/usr/share/applications/openoffice.org-draw.desktop \
+/usr/share/applications/openoffice.org-writer.desktop \
+/usr/share/applications/scribus.desktop \
+/usr/share/applications/vlc.desktop \
+/usr/share/applications/cheese.desktop \
+/usr/share/applications/gnome-btdownload.desktop \
+/usr/share/applications/nm-connection-editor.desktop \
+/usr/share/applications/openoffice.org-impress.desktop \
+/usr/share/applications/openproj.desktop \
+/usr/share/applications/system-config-printer.desktop \
+/usr/share/applications/winecfg.desktop \
+/usr/share/applications/dia-common.desktop \
+/usr/share/applications/gparted.desktop \
+/usr/share/applications/openoffice.org-base.desktop \
+/usr/share/applications/openoffice.org-math.desktop \
+/usr/share/applications/pidgin.desktop \
+/usr/share/applications/thunderbird.desktop \
+/usr/share/applications/xscreensaver.desktop \
+/usr/share/applications/ekiga.desktop \
+/usr/share/applications/gtkpod.desktop \
+/usr/share/applications/openoffice.org-calc.desktop \
+/usr/share/applications/openoffice.org-startcenter.desktop \
+/usr/share/applications/planner.desktop \
+/usr/share/applications/uninstaller.desktop"
 
 case "$1" in
   install|configure)
 
-    #
-    # Bundles
-    #
-    cp -a /usr/share/canaima-estilo-visual/etc /
-    cp -a /usr/share/canaima-estilo-visual/usr /
-
-
-    for archivo in /usr/share/applications/amsn.desktop /usr/share/applications/freemind.desktop /usr/share/applications/htop.desktop /usr/share/applications/openoffice.org-draw.desktop /usr/share/applications/openoffice.org-writer.desktop /usr/share/applications/scribus.desktop /usr/share/applications/vlc.desktop /usr/share/applications/cheese.desktop /usr/share/applications/gnome-btdownload.desktop  /usr/share/applications/nm-connection-editor.desktop /usr/share/applications/openoffice.org-impress.desktop /usr/share/applications/openproj.desktop /usr/share/applications/system-config-printer.desktop /usr/share/applications/winecfg.desktop /usr/share/applications/dia-common.desktop /usr/share/applications/gparted.desktop /usr/share/applications/openoffice.org-base.desktop /usr/share/applications/openoffice.org-math.desktop /usr/share/applications/pidgin.desktop /usr/share/applications/thunderbird.desktop /usr/share/applications/xscreensaver.desktop /usr/share/applications/ekiga.desktop /usr/share/applications/gtkpod.desktop /usr/share/applications/openoffice.org-calc.desktop /usr/share/applications/openoffice.org-startcenter.desktop /usr/share/applications/planner.desktop /usr/share/applications/uninstaller.desktop
-	        do
+    for archivo in ${ARCHIVOS}
+	do
 	        if [ -e $archivo ]
 		        then
 	                ORIGEN=`basename $archivo`
-			cp /usr/share/canaima-estilo-visual/applications/$ORIGEN $archivo
+			cp /usr/share/canaima-estilo-visual/desktop-enlaces/$ORIGEN $archivo
               fi
               done
-
-    #corrección a versión de openoffice que crea íconos duplicados
-	if [ -e /usr/share/applications/ooo-base.desktop ] 
-	then 
-	    rm /usr/share/applications/ooo-*
-	fi
 
     #
     # Tema de grub
@@ -42,22 +55,22 @@ case "$1" in
     # Opciones para GDM
     #
    
-    file=/etc/gdm/gdm.conf
-    if [ -e $file ]
-    then
-	    if grep 'GraphicalTheme=' $file >/dev/null 2>&1
-	    then
-	      sed -i -e '
-	      /^\[greeter\]$/,/^$/ {
-	      s/^.*GraphicalTheme=.*$/GraphicalTheme=Canaima\nGraphicalThemedColor=\#3c281f/;
-	      }
-	      ' $file
-	    else
-	      sed -i -e '
-	      s/^\[greeter\] *$/[greeter]\nGraphicalTheme=Canaima\nGraphicalThemedColor=\#3c281f/;
-	      ' $file
-	    fi
-    fi
+#    file=/etc/gdm3/daemon.conf
+#    if [ -e $file ]
+#    then
+#	    if grep 'GraphicalTheme=' $file >/dev/null 2>&1
+#	    then
+#	      sed -i -e '
+#	      /^\[greeter\]$/,/^$/ {
+#	      s/^.*GraphicalTheme=.*$/GraphicalTheme=Canaima\nGraphicalThemedColor=\#3c281f/;
+#	      }
+#	      ' $file
+#	    else
+#	      sed -i -e '
+#	      s/^\[greeter\] *$/[greeter]\nGraphicalTheme=Canaima\nGraphicalThemedColor=\#3c281f/;
+#	      ' $file
+#	    fi
+#    fi
 
     #
     # Hacks de GConf
