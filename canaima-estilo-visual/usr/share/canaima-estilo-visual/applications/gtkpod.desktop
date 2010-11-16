@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=gtkpod
+Name[es]=Gestor gtkpod
+Icon=gtkpod-icon-32x32.png
+Comment=Manage songs and playlists on your Apple iPod
+Exec=gtkpod
+Terminal=false
+Type=Application
+Categories=GTK;AudioVideo;

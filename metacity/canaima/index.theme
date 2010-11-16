@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Canaima
+Type=X-GNOME-Metatheme
+Comment=Estilo visual de Canaima GNU/Linux
+
+[X-GNOME-Metatheme]
+GtkTheme=Clearlooks
+MetacityTheme=Canaima
+IconTheme=Oxygen-Green-Canaima
+GtkColorScheme=fg_color:#000,bg_color:#EDECEB,base_color:#fff,text_color:#1A1A1A,selected_bg_color:#C8B895,selected_fg_color:#fff,tooltip_bg_color:#F5F5B5,tooltip_fg_color:#000
+CursorTheme=canaima-cursor
+CursorSize=24
+BackgroundImage=/usr/share/canaima-estilo-visual/canaima-fondo.jpg

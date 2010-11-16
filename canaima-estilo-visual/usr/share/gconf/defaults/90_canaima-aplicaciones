@@ -1,0 +1,7 @@
+/desktop/gnome/applications/browser/exec	"firefox"
+/desktop/gnome/url-handlers/about/command	"firefox %s"
+/desktop/gnome/url-handlers/http/command	"firefox %s"
+/desktop/gnome/url-handlers/https/command	"firefox %s"
+/desktop/gnome/url-handlers/unknown/command	"firefox %s"
+/desktop/gnome/url-handlers/h323/command	"ekiga -c %s"
+/desktop/gnome/url-handlers/mailto/command	"thunderbird"

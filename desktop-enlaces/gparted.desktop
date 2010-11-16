@@ -1,0 +1,19 @@
+[Desktop Entry]
+Name=Partition Editor
+Name[es]=Editor de particiones Gparted
+Comment=Create, reorganize, and delete partitions
+Comment[cs]=Vytvořit, znovu uspořádat a odstranit oddíly
+Comment[es]=Cree, reorganice y borre particiones
+Comment[hu]=Partíciók létrehozása, újraszervezése és törlése
+Comment[nl]=Partities aanmaken, ordenen en verwijderen
+Comment[pl]=Tworzenie, reorganizacja i usuwanie partycji
+Comment[pt_BR]=Crie, reorganize e exclua partições
+Comment[sk]=Vytvoriť, preorganizovať a odstrániť oddiely
+Comment[sv]=Skapa, organisera om och ta bort partitioner
+Exec=su-to-root -X -c /usr/sbin/gparted
+Icon=gparted
+Terminal=false
+Type=Application
+Categories=GNOME;System;Settings;
+StartupNotify=true
+X-Ubuntu-Gettext-Domain=gparted

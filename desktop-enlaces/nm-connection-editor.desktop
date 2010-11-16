@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Editor de configuraciones de red
+Comment=Editor de configuraciones de red
+Icon=nm-device-wireless
+Exec=nm-connection-editor
+Terminal=false
+Type=Application
+Categories=Settings;X-GNOME-NetworkSettings;
+OnlyShowIn=GNOME;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=NetworkManager
+X-GNOME-Bugzilla-Component=general

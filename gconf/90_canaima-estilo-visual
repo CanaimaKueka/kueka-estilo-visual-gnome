@@ -1,0 +1,18 @@
+/apps/nautilus/preferences/always_use_browser true
+
+/apps/metacity/general/theme Canaima
+/desktop/gnome/interface/gtk_theme Clearlooks
+/desktop/gnome/interface/icon_theme canaima-iconos
+/desktop/gnome/peripherals/mouse/cursor_theme canaima-cursores
+
+/desktop/gnome/background/picture_options stretched
+/desktop/gnome/background/picture_filename /usr/share/canaima-estilo-visual/canaima-fondo.jpg
+
+/apps/gnome-session/options/show_splash_screen true
+/apps/gnome-session/options/splash_image /usr/share/canaima-estilo-visual/canaima-gnome-splash.png
+
+/apps/panel/applets/clock_screen0/prefs/format 12-hour
+
+/apps/gnome-terminal/profiles/Default/background_type transparent
+/apps/gnome-terminal/profiles/Default/background_darkness 0.85
+/apps/gnome-terminal/profiles/Default/background_color white
