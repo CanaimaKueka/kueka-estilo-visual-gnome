@@ -15,7 +15,7 @@ install:
 	mkdir -p $(DESTDIR)/usr/share/gconf/defaults/
 	cp -r gconf/* $(DESTDIR)/usr/share/gconf/defaults/
 
-	mkdir -p $(DESTDIR)/usr/share/themes/canaima/
+	mkdir -p $(DESTDIR)/usr/share/themes/
 	cp -r metacity/canaima-metacity $(DESTDIR)/usr/share/themes/
 	cp -r gtk/canaima-gtk $(DESTDIR)/usr/share/themes/
 
@@ -29,12 +29,16 @@ install:
 	mkdir -p $(DESTDIR)/usr/lib/mime/packages/
 	cp -r mime/* $(DESTDIR)/usr/lib/mime/packages/
 
-	
-
 uninstall:
 
 	rm -rf $(DESTDIR)/usr/share/icons/canaima-estilo-visual/
-	rm -rf $(DESTDIR)/usr/share/themes/canaima/
+	rm -rf $(DESTDIR)/usr/share/themes/canaima-metacity/
+	rm -rf $(DESTDIR)/usr/share/themes/canaima-gtk/
+	rm -rf $(DESTDIR)/usr/lib/mime/packages/openoffice.org-writer
+	rm -rf $(DESTDIR)/usr/lib/mime/packages/openoffice.org-calc
+	rm -rf $(DESTDIR)/usr/lib/mime/packages/openoffice.org-impress
+	rm -rf $(DESTDIR)/etc/grub.d/10_linux
+	rm -rf $(DESTDIR)/etc/grub.d/05_debian_theme
 
 clean:
 
