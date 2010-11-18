@@ -1,15 +1,14 @@
 Source: canaima-estilo-visual
 Section: misc
 Priority: optional
-Maintainer: Equipo de Desarrollo de Canaima GNU/Linux <desarrolladores@canaima.softwarelibre.gob.ve>
-Uploaders: Carlos A. Guerrero M. <guerrerocarlos@gmail.com>, Diego A. Aguilera Z. <diegoaguilera85@gmail.com>, Luis A. Martínez F. <martinez.faneyth@gmail.com>, Francisco J. Vásquez G. <franjvasquezg@gmail.com>
+Maintainer: Carlos Alejandro Guerrero Mora <guerrerocarlos@gmail.com>, Diego Alberto Aguilera Zambrano <diegoaguilera85@gmail.com>, Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>, Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
 Build-Depends: debhelper, cdbs
 Standards-Version: 3.7.3
 Homepage: http://canaima.softwarelibre.gob.ve/
 
 Package: canaima-estilo-visual
 Architecture: all
-Depends: gdm3, gconf2, canaima-estilo-visual-iconos, canaima-plymouth
+Depends: canaima-estilo-visual-iconos, canaima-plymouth
 Description: Estilo visual de Canaima GNU/Linux
  Este paquete provee el estilo visual (temas de GDM, Gnome y Grub)
- de Canaima GNU/Linux. También provee un tema de Splashy.
+ de Canaima GNU/Linux.
