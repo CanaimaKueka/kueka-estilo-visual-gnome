@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 PKG="canaima-estilo-visual"
 ARCHIVOS="/etc/grub.d/10_linux \
@@ -50,3 +50,5 @@ case "$1" in
 
   ;;
 esac
+
+#DEBHELPER#
