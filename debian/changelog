@@ -2,8 +2,9 @@ canaima-estilo-visual (3.0+1) unstable; urgency=low
 
   * [046dfb6] Cambios en los archivos del paquete fuente.
   * [5551fe0] Agregando vcs-git a debian/control
+  * [c45de17] Corrigiendo errores reportados por lintian
 
- -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Thu, 18 Nov 2010 18:11:56 -0430
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 19 Nov 2010 16:44:24 -0430
 
 canaima-estilo-visual (3.0+0) unstable; urgency=low
 
