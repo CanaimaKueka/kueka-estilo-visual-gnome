@@ -55,8 +55,7 @@ case "$1" in
 			then
 
 				BASE=`basename $archivo`
-				dpkg-divert --package ${PKG} --add --rename \
-					--divert /var/lib/${PKG}/diverts/$BASE $archivo
+				dpkg-divert --package ${PKG} --add --rename --divert /var/lib/${PKG}/diverts/$BASE $archivo
 			fi
 		done
 

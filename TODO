@@ -8,4 +8,11 @@ GRANDES MODIFICACIONES
 
 PEQUEÑAS MODIFICACIONES
 
-* 
+* Now running lintian...
+W: canaima-estilo-visual source: non-native-package-with-native-version
+E: canaima-estilo-visual: copyright-should-refer-to-common-license-file-for-gpl
+W: canaima-estilo-visual: gconftool-used-in-maintainer-script postinst:82
+W: canaima-estilo-visual: gconftool-used-in-maintainer-script postinst:84
+W: canaima-estilo-visual: gconftool-used-in-maintainer-script postinst:86
+W: canaima-estilo-visual: gconftool-used-in-maintainer-script postinst:88
+

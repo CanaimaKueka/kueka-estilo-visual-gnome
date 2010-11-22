@@ -42,8 +42,7 @@ case "$1" in
 	if [ -e $archivo ] 
 	then
 	      BASE=`basename $archivo`
-	      dpkg-divert --package $PKG --remove --rename \
-	                  --divert /var/lib/$PKG/diverts/$BASE $archivo
+	      dpkg-divert --package $PKG --remove --rename --divert /var/lib/$PKG/diverts/$BASE $archivo
 	fi
     done
 
