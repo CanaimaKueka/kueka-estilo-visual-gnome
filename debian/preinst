@@ -1,4 +1,19 @@
 #!/bin/bash -e
+#
+# ==============================================================================
+# PAQUETE: canaima-estilo-visual
+# ARCHIVO: preinst
+# DESCRIPCIÓN: Configura el sistema antes de la instalación del paquete.
+# COPYRIGHT:
+#  (C) 2010 Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>
+#  (C) 2010 Diego Alberto Aguilera Zambrano <daguilera85@gmail.com>
+#  (C) 2010 Carlos Alejandro Guerrero Mora <guerrerocarlos@gmail.com>
+#  (C) 2010 Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
+# LICENCIA: GPL3
+# ==============================================================================
+#
+# Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los
+# términos de la Licencia Pública General de GNU (versión 3).
 
 PKG="canaima-estilo-visual"
 ARCHIVOS="/etc/grub.d/10_linux \
@@ -34,32 +49,99 @@ ARCHIVOS="/etc/grub.d/10_linux \
 /usr/share/applications/planner.desktop \
 /usr/share/applications/uninstaller.desktop"
 
-case "$1" in
+case ${1} in
 
-	upgrade)
-	;;
-	
-	install)
+        install|upgrade)
 
-		if [ ! -e /var/lib/${PKG}/diverts ]
+                # ================================================================
+                # Limpieza de configuraciones anteriores y residuos de Canaima 2.1
+                # ================================================================
+
+		if [ "$(dpkg-query -s ${PKG} | grep Status)" == "Status: install ok installed" ] && [ "$(dpkg-query -s ${PKG} | grep 'Version: 2.')" != '' ]
 		then
 
-			mkdir -p /var/lib/${PKG}/diverts
+	                if [ -e /etc/grub.d/05_debian_theme ] && [ -e /etc/grub.d/10_linux ]
+        	        then
+
+                	        echo "===== Limpiando configuraciones del /etc/grub.d/ de Canaima 2.1 ====="
+                        	rm /etc/grub.d/05_debian_theme
+				rm /etc/grub.d/10_linux
+
+        	        fi
+
+                	if [ -e /usr/lib/mime/packages/openoffice.org-calc ] && [ -e /usr/lib/mime/packages/openoffice.org-impress ] && [ -e /usr/lib/mime/packages/openoffice.org-writer ]
+			then
+
+	                        echo "===== Limpiando /usr/lib/mime/packages/ de Canaima 2.1 ====="
+        	                rm /usr/lib/mime/packages/openoffice.org-calc
+				rm /usr/lib/mime/packages/openoffice.org-impress
+				rm /usr/lib/mime/packages/openoffice.org-writer
+
+			fi
+
+			if [ -e /usr/share/themes/Clearlooks ] && [ -e /usr/share/splashy ] && [ -e /usr/share/doc/canaima-estilo-visual ] && [ -e /usr/share/canaima-estilo-visual ]
+			then
+
+				echo "===== Limpiando /usr/share/applications/gnome-about.desktop de Canaima 2.1 ====="
+				rm -rf /usr/share/themes/Clearlooks/
+				rm -rf /usr/share/splashy/
+				rm -rf /usr/share/doc/canaima-estilo-visual/
+				rm -rf /usr/share/canaima-estilo-visual/
+
+			fi
 
 		fi
 
-		for archivo in ${ARCHIVOS}
-		do
+                # ==================================================
+                # Creación de los diverts para canaima-estilo-visual
+                # ==================================================
+                # Diverts: proceso de reemplazo de archivos puestos
+                # por un paquete A, que van a ser sustituídos por
+                # archivos de un paquete B. El sistema de manejo de
+                # paquetes de Debian no permite que un paquete sobreescriba
+                # archivos de otro (mediante cp o mv) sin hacer un
+                # divert previamente.
 
-			if [ -e $archivo ] 
-			then
+                # Si no existe el directorio a donde se van a mover los archivos...
+                if [ ! -e /var/lib/${PKG}/diverts ]
+                then
 
-				BASE=`basename $archivo`
-				dpkg-divert --package ${PKG} --add --rename --divert /var/lib/${PKG}/diverts/$BASE $archivo
-			fi
-		done
+                        # ... lo creamos
+                        mkdir -p /var/lib/${PKG}/diverts/
+
+                fi
+
+                # Para todos los archivos listados en la variable ARCHIVOS...
+                for archivo in ${ARCHIVOS}
+                do
+
+                        # Obteniendo sólo el nombre del archivo y no la ruta completa
+                        BASE=$(basename ${archivo})
+
+                        # Añadir un divert del paquete PKG:
+                        # 1.- Mueve el archivo del paquete original a /var/lib/${PKG}/diverts/${BASE}
+                        # 2.- El nuevo archivo del paquete PKG que va a reemplazar al archivo del paquete original
+                        #     va a ser ${archivo}
+                        # 3.- El espacio queda disponible para que en el proceso de instalación del paquete,
+                        #     el archivo nuevo se copie, sin que dpkg se queje.
+
+                        echo "===== Agregando diverts para ${PKG} ====="
+                        dpkg-divert --package ${PKG} --add --rename --divert /var/lib/${PKG}/diverts/${BASE} ${archivo}
+
+                done
 
 	;;
+
+        abort-upgrade)
+        ;;
+
+        *)
+                echo "preinst no reconoce el argumento '"${1}"'" >&2
+                exit 1
+        ;;
+
 esac
 
 #DEBHELPER#
+
+exit 0

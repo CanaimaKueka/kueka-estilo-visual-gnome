@@ -1,4 +1,21 @@
 #!/bin/bash -e
+#
+# ==============================================================================
+# PAQUETE: canaima-estilo-visual
+# ARCHIVO: postrm
+# DESCRIPCIÓN: Revierte los cambios hechos por el paquete en los scripts del
+#              mantenedor, de forma tal de asegurarse que el sistema quede
+#              como estaba antes de su instalación.
+# COPYRIGHT:
+#  (C) 2010 Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>
+#  (C) 2010 Diego Alberto Aguilera Zambrano <daguilera85@gmail.com>
+#  (C) 2010 Carlos Alejandro Guerrero Mora <guerrerocarlos@gmail.com>
+#  (C) 2010 Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
+# LICENCIA: GPL3
+# ==============================================================================
+#
+# Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los
+# términos de la Licencia Pública General de GNU (versión 3).
 
 PKG="canaima-estilo-visual"
 ARCHIVOS="/etc/grub.d/10_linux \
@@ -34,20 +51,47 @@ ARCHIVOS="/etc/grub.d/10_linux \
 /usr/share/applications/planner.desktop \
 /usr/share/applications/uninstaller.desktop"
 
-case "$1" in
-  upgrade)
-    for archivo in ${ARCHIVOS}
+case ${1} in
 
-    do
-	if [ -e $archivo ] 
-	then
-	      BASE=`basename $archivo`
-	      dpkg-divert --package $PKG --remove --rename --divert /var/lib/$PKG/diverts/$BASE $archivo
-	fi
-    done
+        purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
 
+                # ================================================
+                # Restaurar los diverts para canaima-estilo-visual
+                # ================================================
+                # Diverts: proceso de reemplazo de archivos puestos
+                # por un paquete A, que van a ser sustituídos por
+                # archivos de un paquete B. El sistema de manejo de
+                # paquetes de Debian no permite que un paquete sobreescriba
+                # archivos de otro (mediante cp o mv) sin hacer un
+                # divert previamente.
 
-  ;;
+                # Para todos los archivos listados en la variable ARCHIVOS...
+                for archivo in ${ARCHIVOS}
+                do
+
+                        # Obtenemos sólo el nombre del archivo y no la ruta completa
+                        BASE=$(basename ${archivo})
+
+                        # Remover un divert del paquete PKG:
+                        # 1.- Luego de la desinstalación, el archivo puesto por el paquete
+                        #     al cual se le hizo divert en el preinst, ya no está.
+                        # 2.- Se restaura a su lugar original el archivo copiado anteriormente
+                        #     a /var/lib/${PKG}/diverts/${BASE} para hacer el divert de ${archivo}
+
+                        dpkg-divert --package ${PKG} --remove --rename --divert /var/lib/${PKG}/diverts/${BASE} ${archivo}
+
+                done
+
+        ;;
+
+        *)
+
+                echo "postrm no reconoce el argumento '"${1}"'" >&2
+                exit 1
+        ;;
+
 esac
 
 #DEBHELPER#
+
+exit 0
