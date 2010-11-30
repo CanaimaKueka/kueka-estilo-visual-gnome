@@ -1,3 +1,13 @@
+canaima-estilo-visual (3.0+5) unstable; urgency=low
+
+  * [6b88f77] Removiendo vieja forma de configurar el gconf, los MIME y
+    el 10_linux de grub-common. Además, implementando forma limpia para
+    agregar gconf-defaults
+  * [d8ff1e1] Corrigiendo scripts del mantenedor
+  * [00812cc] Removiendo gconftool del postinst
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 30 Nov 2010 18:46:13 -0430
+
 canaima-estilo-visual (3.0+4) unstable; urgency=low
 
   * [63373f2] Removiendo diverts en el postrm
