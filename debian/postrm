@@ -61,6 +61,8 @@ case ${1} in
                 # archivos de otro (mediante cp o mv) sin hacer un
                 # divert previamente.
 
+		echo "===== Removiendo diverts para ${PKG} ====="
+
                 # Para todos los archivos listados en la variable ARCHIVOS...
                 for archivo in ${ARCHIVOS}
                 do

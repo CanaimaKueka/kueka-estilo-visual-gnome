@@ -107,6 +107,8 @@ case ${1} in
 
                 fi
 
+		echo "===== Agregando diverts para ${PKG} ====="
+
                 # Para todos los archivos listados en la variable ARCHIVOS...
                 for archivo in ${ARCHIVOS}
                 do
@@ -121,7 +123,6 @@ case ${1} in
                         # 3.- El espacio queda disponible para que en el proceso de instalación del paquete,
                         #     el archivo nuevo se copie, sin que dpkg se queje.
 
-                        echo "===== Agregando diverts para ${PKG} ====="
                         dpkg-divert --package ${PKG} --add --rename --divert /var/lib/${PKG}/diverts/${BASE} ${archivo}
 
                 done
