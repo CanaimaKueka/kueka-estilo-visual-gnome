@@ -75,7 +75,7 @@ case ${1} in
                         #     al cual se le hizo divert en el preinst, ya no está.
                         # 2.- Se restaura a su lugar original el archivo copiado anteriormente
                         #     a /var/lib/${PKG}/diverts/${BASE} para hacer el divert de ${archivo}
-
+			rm -rf ${archivo}
                         dpkg-divert --package ${PKG} --remove --rename --divert /var/lib/${PKG}/diverts/${BASE} ${archivo}
 
                 done
