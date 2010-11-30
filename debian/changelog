@@ -1,3 +1,10 @@
+canaima-estilo-visual (3.0+8) unstable; urgency=low
+
+  * [2939a4a] Corrigiendo el lugar donde se ponen los .desktop
+  * [29afe44] Corrigiendo flooding de los diverts
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 30 Nov 2010 19:10:59 -0430
+
 canaima-estilo-visual (3.0+7) unstable; urgency=low
 
   * [b3fa3de] Corrigiendo borrado de los diverts
