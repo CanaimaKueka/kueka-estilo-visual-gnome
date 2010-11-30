@@ -1,3 +1,10 @@
+canaima-estilo-visual (3.0+9) unstable; urgency=low
+
+  * [b263ac1] Asegurándose que los .desktop están desinstalados antes de
+    devolver el divert
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 30 Nov 2010 19:18:35 -0430
+
 canaima-estilo-visual (3.0+8) unstable; urgency=low
 
   * [2939a4a] Corrigiendo el lugar donde se ponen los .desktop
