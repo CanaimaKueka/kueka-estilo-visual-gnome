@@ -1,3 +1,9 @@
+canaima-estilo-visual (3.0+7) unstable; urgency=low
+
+  * [b3fa3de] Corrigiendo borrado de los diverts
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 30 Nov 2010 18:59:41 -0430
+
 canaima-estilo-visual (3.0+6) unstable; urgency=low
 
   * [f0df247] Corrigiendo error estúpido
