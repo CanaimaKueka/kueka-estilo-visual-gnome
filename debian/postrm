@@ -78,13 +78,7 @@ case ${1} in
 
                 done
 
-		if [ -e /var/lib/${PKG}/diverts/ ]
-		then
-
-			rm -rf /var/lib/${PKG}/diverts/
-
-		fi
-        ;;
+	;;
 
         *)
 
