@@ -15,4 +15,4 @@
 
 /apps/gnome-terminal/profiles/Default/background_type transparent
 /apps/gnome-terminal/profiles/Default/background_darkness 0.85
-/apps/gnome-terminal/profiles/Default/background_color white
+/apps/gnome-terminal/profiles/Default/background_color black
