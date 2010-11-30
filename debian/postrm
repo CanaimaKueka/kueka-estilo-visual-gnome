@@ -18,7 +18,7 @@
 # términos de la Licencia Pública General de GNU (versión 3).
 
 PKG="canaima-estilo-visual"
-ARCHIVOS="/etc/grub.d/10_linux \
+ARCHIVOS="/etc/grub.d/05_debian_theme \
 /usr/share/applications/amsn.desktop \
 /usr/share/applications/freemind.desktop \
 /usr/share/applications/htop.desktop \
