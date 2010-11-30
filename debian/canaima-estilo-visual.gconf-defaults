@@ -1,18 +1,24 @@
+/desktop/gnome/peripherals/keyboard/xkb/model pc105
+/desktop/gnome/peripherals/keyboard/kbd/layouts '[latam,es]'
+/apps/metacity/global_keybindings/show_desktop Super_R
+/apps/metacity/global_keybindings/panel_main_menu Super_L
 /apps/nautilus/preferences/always_use_browser true
-
 /apps/metacity/general/theme canaima-metacity
 /desktop/gnome/interface/gtk_theme canaima-gtk
 /desktop/gnome/interface/icon_theme canaima-iconos
 /desktop/gnome/peripherals/mouse/cursor_theme canaima-cursores
-
 /desktop/gnome/background/picture_options stretched
 /desktop/gnome/background/picture_filename /usr/share/canaima-estilo-visual/canaima-fondo.jpg
-
 /apps/gnome-session/options/show_splash_screen true
 /apps/gnome-session/options/splash_image /usr/share/canaima-estilo-visual/canaima-gnome-splash.png
-
 /apps/panel/applets/clock_screen0/prefs/format 12-hour
-
 /apps/gnome-terminal/profiles/Default/background_type transparent
 /apps/gnome-terminal/profiles/Default/background_darkness 0.85
 /apps/gnome-terminal/profiles/Default/background_color black
+/desktop/gnome/applications/browser/exec	"firefox"
+/desktop/gnome/url-handlers/about/command	"firefox %s"
+/desktop/gnome/url-handlers/http/command	"firefox %s"
+/desktop/gnome/url-handlers/https/command	"firefox %s"
+/desktop/gnome/url-handlers/unknown/command	"firefox %s"
+/desktop/gnome/url-handlers/h323/command	"ekiga -c %s"
+/desktop/gnome/url-handlers/mailto/command	"thunderbird"
