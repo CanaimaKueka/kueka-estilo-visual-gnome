@@ -21,18 +21,12 @@ case ${1} in
 
 	configure)
 
-		update-grub2
-		update-gconf-defaults
+	if [ -x /usr/share/update-notifier/notify-reboot-required ]
+	then
 
-		gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /desktop/gnome/peripherals/keyboard/xkb/model pc105
-		gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /desktop/gnome/peripherals/keyboard/kbd/model pc105
-		gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type list --list-type string --set /desktop/gnome/peripherals/keyboard/xkb/layouts '[latam,es]'
-		gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type list --list-type string --set /desktop/gnome/peripherals/keyboard/kbd/layouts '[latam,es]'
+	        /usr/share/update-notifier/notify-reboot-required
 
-		dpkg-reconfigure libgconf2-4
-		update-desktop-database
-		update-menus
-
+	fi
 	;;
 
 
