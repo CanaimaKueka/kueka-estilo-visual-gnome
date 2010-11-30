@@ -1,3 +1,9 @@
+canaima-estilo-visual (3.0+4) unstable; urgency=low
+
+  * [63373f2] Removiendo diverts en el postrm
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 30 Nov 2010 16:29:57 -0430
+
 canaima-estilo-visual (3.0+3) unstable; urgency=low
 
   * [8c8740f] Modificando scripts del mantenedor
