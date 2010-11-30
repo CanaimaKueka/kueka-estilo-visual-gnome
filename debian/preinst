@@ -56,7 +56,7 @@ case ${1} in
 		if [ "$(dpkg-query -s ${PKG} | grep Status)" == "Status: install ok installed" ] && [ "$(dpkg-query -s ${PKG} | grep 'Version: 2.')" != '' ]
 		then
 
-	                if [ -e /etc/grub.d/05_debian_theme ] && [ -e /etc/grub.d/10_linux ]
+	                if [ -e /etc/grub.d/05_debian_theme ] || [ -e /etc/grub.d/10_linux ]
         	        then
 
                 	        echo "===== Limpiando configuraciones del /etc/grub.d/ de Canaima 2.1 ====="
@@ -65,7 +65,7 @@ case ${1} in
 
         	        fi
 
-                	if [ -e /usr/lib/mime/packages/openoffice.org-calc ] && [ -e /usr/lib/mime/packages/openoffice.org-impress ] && [ -e /usr/lib/mime/packages/openoffice.org-writer ]
+                	if [ -e /usr/lib/mime/packages/openoffice.org-calc ] || [ -e /usr/lib/mime/packages/openoffice.org-impress ] || [ -e /usr/lib/mime/packages/openoffice.org-writer ]
 			then
 
 	                        echo "===== Limpiando /usr/lib/mime/packages/ de Canaima 2.1 ====="
@@ -75,7 +75,7 @@ case ${1} in
 
 			fi
 
-			if [ -e /usr/share/themes/Clearlooks ] && [ -e /usr/share/splashy ] && [ -e /usr/share/doc/canaima-estilo-visual ] && [ -e /usr/share/canaima-estilo-visual ]
+			if [ -e /usr/share/themes/Clearlooks ] || [ -e /usr/share/splashy ] || [ -e /usr/share/doc/canaima-estilo-visual ] || [ -e /usr/share/canaima-estilo-visual ]
 			then
 
 				echo "===== Limpiando /usr/share/applications/gnome-about.desktop de Canaima 2.1 ====="
