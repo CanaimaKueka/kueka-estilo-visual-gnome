@@ -1,3 +1,9 @@
+canaima-estilo-visual (3.0+13) unstable; urgency=low
+
+  * [6c36037] Removiendo entradas del gconf de Canaima 2.1
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Wed, 01 Dec 2010 07:50:58 -0430
+
 canaima-estilo-visual (3.0+12) unstable; urgency=low
 
   * [49852cc] Agregando prioridad a debian/rules
