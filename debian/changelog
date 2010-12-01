@@ -1,3 +1,9 @@
+canaima-estilo-visual (3.0+12) unstable; urgency=low
+
+  * [49852cc] Agregando prioridad a debian/rules
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 30 Nov 2010 20:21:21 -0430
+
 canaima-estilo-visual (3.0+11) unstable; urgency=low
 
   * [0027682] Corrigiendo bug
