@@ -49,7 +49,7 @@ ARCHIVOS="/etc/grub.d/05_debian_theme \
 
 case ${1} in
 
-        purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        purge|remove|failed-upgrade|abort-install|abort-upgrade|disappear)
 
                 # ================================================
                 # Restaurar los diverts para canaima-estilo-visual

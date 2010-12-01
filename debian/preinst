@@ -47,7 +47,7 @@ ARCHIVOS="/etc/grub.d/05_debian_theme \
 
 case ${1} in
 
-        install|upgrade)
+        install)
 
                 # ================================================================
                 # Limpieza de configuraciones anteriores y residuos de Canaima 2.1
