@@ -47,6 +47,10 @@ ARCHIVOS="/etc/grub.d/05_debian_theme \
 
 case ${1} in
 
+	upgrade)
+	# No hace nada, el upgrade daña la creación de los diverts 
+	;;
+
         install)
 
                 # ================================================================
