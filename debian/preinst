@@ -48,7 +48,31 @@ ARCHIVOS="/etc/grub.d/05_debian_theme \
 case ${1} in
 
 	upgrade)
-	# No hace nada, el upgrade daña la creación de los diverts 
+	# Hacer el divert de los archivos que por alguna razón no hayan sido divertidos
+	# Ejemplo: una instalación quitó el divert y lo reemplazó por el archivo original
+
+	for archivo_divert in ${ARCHIVOS}
+	do
+
+		if [ dpkg-divert --listpackage ${archivo_divert} == '' ]
+		then
+
+			# Obteniendo sólo el nombre del archivo y no la ruta completa
+			BASE=$(basename ${archivo_divert})
+
+			# Añadir un divert del paquete PKG:
+			# 1.- Mueve el archivo del paquete original a /var/lib/${PKG}/diverts/${BASE}
+			# 2.- El nuevo archivo del paquete PKG que va a reemplazar al archivo del paquete original
+			#     va a ser ${archivo}
+			# 3.- El espacio queda disponible para que en el proceso de instalación del paquete,
+			#     el archivo nuevo se copie, sin que dpkg se queje.
+
+			dpkg-divert --package ${PKG} --add --rename --divert /var/lib/${PKG}/diverts/${BASE} ${archivo_divert}
+
+		fi
+
+	done
+
 	;;
 
         install)
@@ -59,6 +83,9 @@ case ${1} in
 
 		if [ "$(dpkg-query -s ${PKG} | grep Status)" == "Status: install ok installed" ] && [ "$(dpkg-query -s ${PKG} | grep 'Version: 2.')" != '' ]
 		then
+
+			dpkg-divert --package ${PKG} --remove --rename --divert /var/lib/${PKG}/diverts/gtkrc /usr/share/themes/Clearlooks/gtk-2.0/gtkrc
+			dpkg-divert --package ${PKG} --remove --rename --divert /var/lib/${PKG}/diverts/grub /etc/default/grub
 
 	                if [ -e /etc/grub.d/05_debian_theme ] || [ -e /etc/grub.d/10_linux ]
         	        then
