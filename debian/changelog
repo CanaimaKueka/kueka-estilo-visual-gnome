@@ -1,3 +1,9 @@
+canaima-estilo-visual (3.0+16) unstable; urgency=low
+
+  * [5d8b997] Corrigiendo error en el preinst
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 07 Dec 2010 15:35:54 -0430
+
 canaima-estilo-visual (3.0+15) unstable; urgency=low
 
   * [b9da3b9] Corrigiendo error de sintaxis en el preinst
