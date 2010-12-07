@@ -54,7 +54,7 @@ case ${1} in
 	for archivo_divert in ${ARCHIVOS}
 	do
 
-		if [ $( dpkg-divert --listpackage ${archivo_divert} ) == '' ]
+		if [ -z $( dpkg-divert --listpackage ${archivo_divert} ) ]
 		then
 
 			# Obteniendo sólo el nombre del archivo y no la ruta completa
