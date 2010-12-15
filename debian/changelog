@@ -1,3 +1,10 @@
+canaima-estilo-visual (3.0+18) unstable; urgency=low
+
+  * [5c8f8bf] Eliminando las fuentes .xcf porque ocupan mucho espacio,
+    dejando las fuentes svg.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Wed, 15 Dec 2010 08:55:53 -0430
+
 canaima-estilo-visual (3.0+17) unstable; urgency=low
 
   * [81f9157] Cambiando por completo el estilo visual a uno nuevo
