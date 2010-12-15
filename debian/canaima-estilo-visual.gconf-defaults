@@ -7,10 +7,8 @@
 /desktop/gnome/interface/gtk_theme canaima-gtk
 /desktop/gnome/interface/icon_theme canaima-iconos
 /desktop/gnome/peripherals/mouse/cursor_theme canaima-cursores
-/desktop/gnome/background/picture_options stretched
-/desktop/gnome/background/picture_filename /usr/share/canaima-estilo-visual/canaima-fondo.jpg
-/apps/gnome-session/options/show_splash_screen true
-/apps/gnome-session/options/splash_image /usr/share/canaima-estilo-visual/canaima-gnome-splash.png
+/apps/gnome-session/options/show_splash_screen false
+/apps/gdm/simple-greeter/logo_icon_name canaima-vector
 /apps/panel/applets/clock_screen0/prefs/format 12-hour
 /apps/gnome-terminal/profiles/Default/background_type transparent
 /apps/gnome-terminal/profiles/Default/background_darkness 0.85

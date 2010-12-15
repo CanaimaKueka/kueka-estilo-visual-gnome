@@ -11,7 +11,7 @@ Vcs-Browser: http://gitorious.org/canaima-gnu-linux/canaima-estilo-visual/trees/
 
 Package: canaima-estilo-visual
 Architecture: all
-Depends: canaima-estilo-visual-iconos, canaima-plymouth, ${shlibs:Depends}, ${misc:Depends}
+Depends: gt2-engines-equinox, canaima-estilo-visual-iconos, canaima-plymouth, ${shlibs:Depends}, ${misc:Depends}
 Description: Estilo visual de Canaima GNU/Linux
  Este paquete provee el estilo visual (temas de GDM, Gnome y Grub)
  de Canaima GNU/Linux.

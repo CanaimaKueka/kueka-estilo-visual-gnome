@@ -29,19 +29,13 @@ install:
 	cp -r gtk/canaima-gtk $(DESTDIR)/usr/share/themes/
 
 	mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual/
-	mkdir -p $(DESTDIR)/usr/share/applications/
-	cp -r desktop-enlaces/* $(DESTDIR)/usr/share/applications/
-	cp -r images/* $(DESTDIR)/usr/share/canaima-estilo-visual/
-
-	mkdir -p $(DESTDIR)/etc/grub.d/
-	cp -r grub/* $(DESTDIR)/etc/grub.d/
+	cp -r arte/* $(DESTDIR)/usr/share/canaima-estilo-visual/
 
 uninstall:
 
-	rm -rf $(DESTDIR)/usr/share/icons/canaima-estilo-visual/
+	rm -rf $(DESTDIR)/usr/share/canaima-estilo-visual/
 	rm -rf $(DESTDIR)/usr/share/themes/canaima-metacity/
 	rm -rf $(DESTDIR)/usr/share/themes/canaima-gtk/
-	rm -rf $(DESTDIR)/etc/grub.d/05_debian_theme
 
 clean:
 

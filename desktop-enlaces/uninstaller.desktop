@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Encoding=UTF-8
-Name=Desinstalador Wine
-Comment=Desinstalador Wine
-Exec=uninstaller
-Icon=/usr/share/pixmaps/wine.xpm
-Terminal=false
-Categories=Application;System;
