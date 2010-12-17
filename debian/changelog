@@ -1,3 +1,9 @@
+canaima-estilo-visual (3.0+19) unstable; urgency=low
+
+  * [1061e61] Corrigiendo dependencias
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Thu, 16 Dec 2010 20:53:17 -0430
+
 canaima-estilo-visual (3.0+18) unstable; urgency=low
 
   * [5c8f8bf] Eliminando las fuentes .xcf porque ocupan mucho espacio,
