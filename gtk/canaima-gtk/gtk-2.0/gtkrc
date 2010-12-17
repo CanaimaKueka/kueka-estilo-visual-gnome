@@ -24,7 +24,7 @@
 #  bg[NORMAL] is trough color
 #  bg[SELECTED] is fill color
 
-gtk_color_scheme = "fg_color:#333333\nbg_color:#DDDDDD\nbase_color:#FFFFFF\ntext_color:#333333\nselected_bg_color:#5188E7\nselected_fg_color:#FFFFFF\ntooltip_fg_color:#EEEEEE\ntooltip_bg_color:#222222"
+gtk_color_scheme = "fg_color:#333333\nbg_color:#ece9d8\nbase_color:#FFFFFF\ntext_color:#333333\nselected_bg_color:#c8dd9d\nselected_fg_color:#FFFFFF\ntooltip_fg_color:#EEEEEE\ntooltip_bg_color:#222222"
 gtk-icon-sizes = "panel-menu=24,24:panel=22,22:gtk-button=16,16:gtk-large-toolbar=22,22"
 
 gtk-auto-mnemonics = 1
@@ -141,7 +141,7 @@ style "theme-default" {
         menuitemstyle       = 0 # 0 = normal, 1 = glassy
         listviewheaderstyle = 0 # 0 = normal, 1 = glassy
         listviewitemstyle   = 1 # 0 = flat, 1 = gradient
-        scrollbarstyle      = 0 # 0 = normal, 1 = glassy, 2 = normal with handles, 3 = glassy with handles, 4 = flat
+        scrollbarstyle      = 3 # 0 = normal, 1 = glassy, 2 = normal with handles, 3 = glassy with handles, 4 = flat
         scalesliderstyle    = 1 # 0 = normal, 1 = glassy, 2 = normal with bullet
         checkradiostyle     = 0 # 0 = normal, 1 = glassy
         progressbarstyle    = 1 # 0 = normal, 1 = glassy
@@ -194,7 +194,7 @@ style "theme-scrollbar" = "theme-default" {
     base[NORMAL] = shade(0.98, @base_color)
     bg[PRELIGHT] = shade (1.15, @bg_color)
     engine "equinox" {
-        curvature = 6
+        curvature = 4
 	}
 }
 
@@ -318,6 +318,14 @@ style "theme-combo-box" = "theme-button" {}
 style "theme-combo-arrow" = "theme-button" {
     xthickness = 1
     ythickness = 1
+}
+
+style "theme-viewport" = "theme-default" {
+	engine "pixmap" {
+		image {
+			function	= SHADOW
+		}		
+	}
 }
 
 style "theme-check-radio-buttons" = "theme-button" {
