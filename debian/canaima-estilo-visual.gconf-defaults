@@ -1,22 +1,89 @@
-/desktop/gnome/peripherals/keyboard/xkb/model pc105
-/desktop/gnome/peripherals/keyboard/kbd/layouts '[latam,es]'
-/apps/metacity/global_keybindings/show_desktop Super_R
-/apps/metacity/global_keybindings/panel_main_menu Super_L
-/apps/nautilus/preferences/always_use_browser true
 /apps/metacity/general/theme canaima-metacity
 /desktop/gnome/interface/gtk_theme canaima-gtk
 /desktop/gnome/interface/icon_theme canaima-iconos
 /desktop/gnome/peripherals/mouse/cursor_theme canaima-cursores
 /apps/gnome-session/options/show_splash_screen false
 /apps/gdm/simple-greeter/logo_icon_name canaima-vector
-/apps/panel/applets/clock_screen0/prefs/format 12-hour
+
 /apps/gnome-terminal/profiles/Default/background_type transparent
 /apps/gnome-terminal/profiles/Default/background_darkness 0.85
 /apps/gnome-terminal/profiles/Default/background_color black
-/desktop/gnome/applications/browser/exec	"firefox"
-/desktop/gnome/url-handlers/about/command	"firefox %s"
-/desktop/gnome/url-handlers/http/command	"firefox %s"
-/desktop/gnome/url-handlers/https/command	"firefox %s"
-/desktop/gnome/url-handlers/unknown/command	"firefox %s"
-/desktop/gnome/url-handlers/h323/command	"ekiga -c %s"
-/desktop/gnome/url-handlers/mailto/command	"thunderbird"
+
+/desktop/gnome/applications/browser/exec	"cunaguaro"
+/desktop/gnome/url-handlers/about/command	"cunaguaro %s"
+/desktop/gnome/url-handlers/http/command	"cunaguaro %s"
+/desktop/gnome/url-handlers/https/command	"cunaguaro %s"
+/desktop/gnome/url-handlers/unknown/command	"cunaguaro %s"
+/desktop/gnome/url-handlers/mailto/command	"guacharo"
+
+/desktop/gnome/peripherals/keyboard/xkb/model pc105
+/desktop/gnome/peripherals/keyboard/kbd/layouts '[latam,es]'
+/apps/metacity/global_keybindings/show_desktop Super_R
+/apps/metacity/global_keybindings/panel_main_menu Super_L
+/apps/nautilus/preferences/always_use_browser true
+
+# Configuración predeterminada para gnome-panel
+# General
+/apps/panel/default_setup/general/applet_id_list [clock,notification_area,show_desktop_button,window_list,workspace_switcher]
+/apps/panel/default_setup/general/object_id_list [menu_bar,browser_launcher,twitter_launcher]
+/apps/panel/default_setup/general/toplevel_id_list top_panel
+
+# Applets
+# Clock
+/apps/panel/default_setup/applets/clock/toplevel_id top_panel
+/apps/panel/default_setup/applets/clock/object_type bonobo-applet
+/apps/panel/default_setup/applets/clock/panel_right_stick true
+/apps/panel/default_setup/applets/clock/position 8
+/apps/panel/default_setup/applets/clock/locked true
+/apps/panel/default_setup/applets/clock/bonobo_iid OAFIID:GNOME_ClockApplet
+
+# Notification Area
+/apps/panel/default_setup/applets/notification_area/toplevel_id top_panel
+/apps/panel/default_setup/applets/notification_area/object_type bonobo-applet
+/apps/panel/default_setup/applets/notification_area/panel_right_stick true
+/apps/panel/default_setup/applets/notification_area/position 7
+/apps/panel/default_setup/applets/notification_area/locked true
+/apps/panel/default_setup/applets/notification_area/bonobo_iid OAFIID:GNOME_NotificationAreaApplet
+
+# "Show desktop" Button
+/apps/panel/default_setup/applets/notification_area/toplevel_id top_panel
+/apps/panel/default_setup/applets/notification_area/object_type bonobo-applet
+/apps/panel/default_setup/applets/notification_area/position 2
+/apps/panel/default_setup/applets/notification_area/locked true
+/apps/panel/default_setup/applets/notification_area/bonobo_iid OAFIID:GNOME_ShowDesktopApplet
+
+# Window List
+/apps/panel/default_setup/applets/notification_area/toplevel_id top_panel
+/apps/panel/default_setup/applets/notification_area/object_type bonobo-applet
+/apps/panel/default_setup/applets/notification_area/position 5
+/apps/panel/default_setup/applets/notification_area/locked true
+/apps/panel/default_setup/applets/notification_area/bonobo_iid OAFIID:GNOME_WindowListApplet
+
+# Workspace Switcher
+/apps/panel/default_setup/applets/notification_area/toplevel_id top_panel
+/apps/panel/default_setup/applets/notification_area/object_type bonobo-applet
+/apps/panel/default_setup/applets/notification_area/panel_right_stick true
+/apps/panel/default_setup/applets/notification_area/position 6
+/apps/panel/default_setup/applets/notification_area/locked true
+/apps/panel/default_setup/applets/notification_area/bonobo_iid OAFIID:GNOME_WorkspaceSwitcherApplet
+
+# Objects
+# browser_launcher
+/apps/panel/default_setup/objects/browser_launcher/launcher_location cunaguaro.desktop
+/apps/panel/default_setup/objects/browser_launcher/locked true
+/apps/panel/default_setup/objects/browser_launcher/object_type launcher-object
+/apps/panel/default_setup/objects/browser_launcher/position 3
+/apps/panel/default_setup/objects/browser_launcher/toplevel_id top_panel
+
+# twitter_launcher
+/apps/panel/default_setup/objects/browser_launcher/launcher_location turpial.desktop
+/apps/panel/default_setup/objects/browser_launcher/locked true
+/apps/panel/default_setup/objects/browser_launcher/object_type launcher-object
+/apps/panel/default_setup/objects/browser_launcher/position 4
+/apps/panel/default_setup/objects/browser_launcher/toplevel_id top_panel
+
+# menu_bar
+/apps/panel/default_setup/objects/browser_launcher/locked true
+/apps/panel/default_setup/objects/browser_launcher/object_type menu-object
+/apps/panel/default_setup/objects/browser_launcher/position 1
+/apps/panel/default_setup/objects/browser_launcher/toplevel_id top_panel
