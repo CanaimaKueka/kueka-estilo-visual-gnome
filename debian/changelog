@@ -1,8 +1,11 @@
 canaima-estilo-visual (3.0+20) unstable; urgency=low
 
   * [e393cb0] Modificando tema
+  * [3318b86] Cambiando la disposición de gnome-panel
+  * [51c1610] Quitando diverts, ya no son necesarios. Actualizando
+    configuración para BURG.
 
- -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 17 Dec 2010 14:33:46 -0430
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Wed, 22 Dec 2010 15:54:30 -0430
 
 canaima-estilo-visual (3.0+19) unstable; urgency=low
 
