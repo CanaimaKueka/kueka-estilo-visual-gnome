@@ -27,8 +27,32 @@ case ${1} in
 	        /usr/share/update-notifier/notify-reboot-required
 
 	fi
-	;;
 
+	if [ -e /usr/sbin/update-grub ]
+	then
+
+		mv /usr/sbin/update-grub /usr/sbin/update-grub.backup
+		ln -s /usr/sbin/update-burg /usr/sbin/update-grub
+
+	fi
+
+	if [ -e /usr/sbin/update-grub2 ]
+	then
+
+		mv /usr/sbin/update-grub2 /usr/sbin/update-grub2.backup
+		ln -s /usr/sbin/update-burg /usr/sbin/update-grub2
+
+	fi
+
+	if [ $( cat /etc/kernel-img.conf | grep "postinst_hook = update-burg" | wc -l ) == 0 ]
+	then
+
+		echo "postinst_hook = update-burg" >> /etc/kernel-img.conf
+		echo "postrm_hook = update-burg" >> /etc/kernel-img.conf
+
+	fi
+
+	;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
         ;;

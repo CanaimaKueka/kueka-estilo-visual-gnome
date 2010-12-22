@@ -16,39 +16,10 @@
 # términos de la Licencia Pública General de GNU (versión 3).
 
 PKG="canaima-estilo-visual"
-ARCHIVOS="/etc/grub.d/05_debian_theme"
 
 case ${1} in
 
-	upgrade)
-	# Hacer el divert de los archivos que por alguna razón no hayan sido divertidos
-	# Ejemplo: una instalación quitó el divert y lo reemplazó por el archivo original
-
-	for archivo_divert in ${ARCHIVOS}
-	do
-
-		if [ -z $( dpkg-divert --listpackage ${archivo_divert} ) ]
-		then
-
-			# Obteniendo sólo el nombre del archivo y no la ruta completa
-			BASE=$(basename ${archivo_divert})
-
-			# Añadir un divert del paquete PKG:
-			# 1.- Mueve el archivo del paquete original a /var/lib/${PKG}/diverts/${BASE}
-			# 2.- El nuevo archivo del paquete PKG que va a reemplazar al archivo del paquete original
-			#     va a ser ${archivo}
-			# 3.- El espacio queda disponible para que en el proceso de instalación del paquete,
-			#     el archivo nuevo se copie, sin que dpkg se queje.
-
-			dpkg-divert --package ${PKG} --add --rename --divert /var/lib/${PKG}/diverts/${BASE} ${archivo_divert}
-
-		fi
-
-	done
-
-	;;
-
-        install)
+        install|upgrade)
 
                 # ================================================================
                 # Limpieza de configuraciones anteriores y residuos de Canaima 2.1
@@ -100,46 +71,6 @@ case ${1} in
 
 
 		fi
-
-                # ==================================================
-                # Creación de los diverts para canaima-estilo-visual
-                # ==================================================
-                # Diverts: proceso de reemplazo de archivos puestos
-                # por un paquete A, que van a ser sustituídos por
-                # archivos de un paquete B. El sistema de manejo de
-                # paquetes de Debian no permite que un paquete sobreescriba
-                # archivos de otro (mediante cp o mv) sin hacer un
-                # divert previamente.
-
-                # Si no existe el directorio a donde se van a mover los archivos...
-                if [ ! -e /var/lib/${PKG}/diverts ]
-                then
-
-                        # ... lo creamos
-                        mkdir -p /var/lib/${PKG}/diverts/
-
-                fi
-
-		echo "===== Agregando diverts para ${PKG} ====="
-
-                # Para todos los archivos listados en la variable ARCHIVOS...
-                for archivo in ${ARCHIVOS}
-                do
-
-                        # Obteniendo sólo el nombre del archivo y no la ruta completa
-                        BASE=$(basename ${archivo})
-
-                        # Añadir un divert del paquete PKG:
-                        # 1.- Mueve el archivo del paquete original a /var/lib/${PKG}/diverts/${BASE}
-                        # 2.- El nuevo archivo del paquete PKG que va a reemplazar al archivo del paquete original
-                        #     va a ser ${archivo}
-                        # 3.- El espacio queda disponible para que en el proceso de instalación del paquete,
-                        #     el archivo nuevo se copie, sin que dpkg se queje.
-
-                        dpkg-divert --package ${PKG} --add --rename --divert /var/lib/${PKG}/diverts/${BASE} ${archivo}
-
-                done
-
 	;;
 
         abort-upgrade)
