@@ -52,6 +52,15 @@ case ${1} in
 
 	fi
 
+	if [ -e /etc/default/burg ]
+        then
+
+		sed -i 's/GRUB_GFXMODE=.*/GRUB_GFXMODE=1024x768/g' /etc/default/burg
+		sed -i 's/GRUB_THEME=.*/GRUB_THEME=radiance/g' /etc/default/burg
+		sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=3/g' /etc/default/burg
+
+        fi
+
 	;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
