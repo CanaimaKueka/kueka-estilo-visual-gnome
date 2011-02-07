@@ -18,47 +18,10 @@
 # términos de la Licencia Pública General de GNU (versión 3).
 
 PKG="canaima-estilo-visual"
-ARCHIVOS="/etc/grub.d/05_debian_theme"
 
 case ${1} in
 
-	upgrade)
-	# No hace nada, el upgrade daña la creación de los diverts
-	;;
-
-        purge|remove|failed-upgrade|abort-install|abort-upgrade|disappear)
-
-                # ================================================
-                # Restaurar los diverts para canaima-estilo-visual
-                # ================================================
-                # Diverts: proceso de reemplazo de archivos puestos
-                # por un paquete A, que van a ser sustituídos por
-                # archivos de un paquete B. El sistema de manejo de
-                # paquetes de Debian no permite que un paquete sobreescriba
-                # archivos de otro (mediante cp o mv) sin hacer un
-                # divert previamente.
-
-		echo "===== Removiendo diverts para ${PKG} ====="
-
-                # Para todos los archivos listados en la variable ARCHIVOS...
-                for archivo in ${ARCHIVOS}
-                do
-
-                        # Obtenemos sólo el nombre del archivo y no la ruta completa
-                        BASE=$(basename ${archivo})
-
-                        # Remover un divert del paquete PKG:
-                        # 1.- Luego de la desinstalación, el archivo puesto por el paquete
-                        #     al cual se le hizo divert en el preinst, ya no está.
-                        # 2.- Se restaura a su lugar original el archivo copiado anteriormente
-                        #     a /var/lib/${PKG}/diverts/${BASE} para hacer el divert de ${archivo}
-
-			[ -e ${archivo} ] && echo "ADVERTENCIA: El archivo ${archivo} no se desinstaló correctamente. Eliminando." && rm -rf ${archivo}
-
-                        dpkg-divert --package ${PKG} --remove --rename --divert /var/lib/${PKG}/diverts/${BASE} ${archivo}
-
-                done
-
+        purge|upgrade|remove|failed-upgrade|abort-install|abort-upgrade|disappear)
 	;;
 
         *)

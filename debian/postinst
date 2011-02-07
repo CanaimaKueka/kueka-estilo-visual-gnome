@@ -16,53 +16,64 @@
 # términos de la Licencia Pública General de GNU (versión 3).
 
 PKG="canaima-estilo-visual"
+# Color Verde
+VERDE="\e[1;32m"
+# Color Rojo
+ROJO="\e[1;31m"
+# Color Amarillo
+AMARILLO="\e[1;33m"
+# Negrita
+BOLD="\e[1m"
+# Caracter de fin de línea
+FIN="\e[0m"
+
+function ERROR() {
+echo -e ${ROJO}${1}${FIN}
+exit 1
+}
+
+function ADVERTENCIA() {
+echo -e ${AMARILLO}${1}${FIN}
+}
+
+function EXITO() {
+echo -e ${VERDE}${1}${FIN}
+}
 
 case ${1} in
 
 	configure)
 
-	if [ -x /usr/share/update-notifier/notify-reboot-required ]
-	then
+	ADVERTENCIA "Migrando Grub a Burg ..."
 
+	if [ -x /usr/share/update-notifier/notify-reboot-required ]; then
 	        /usr/share/update-notifier/notify-reboot-required
-
 	fi
 
-	if [ -e /usr/sbin/update-grub ]
-	then
-
+	if [ -e /usr/sbin/update-grub ]; then
 		mv /usr/sbin/update-grub /usr/sbin/update-grub.backup
 		ln -s /usr/sbin/update-burg /usr/sbin/update-grub
-
 	fi
 
-	if [ -e /usr/sbin/update-grub2 ]
-	then
-
+	if [ -e /usr/sbin/update-grub2 ]; then
 		mv /usr/sbin/update-grub2 /usr/sbin/update-grub2.backup
 		ln -s /usr/sbin/update-burg /usr/sbin/update-grub2
-
 	fi
 
-	if [ $( cat /etc/kernel-img.conf | grep "postinst_hook = update-burg" | wc -l ) == 0 ]
-	then
-
+	if [ $( cat /etc/kernel-img.conf | grep "postinst_hook = update-burg" | wc -l ) == 0 ];	then
 		echo "postinst_hook = update-burg" >> /etc/kernel-img.conf
 		echo "postrm_hook = update-burg" >> /etc/kernel-img.conf
-
 	fi
 
-	if [ -e /etc/default/burg ]
-        then
-
+	if [ -e /etc/default/burg ]; then
 		sed -i 's/GRUB_GFXMODE=.*/GRUB_GFXMODE=1024x768/g' /etc/default/burg
 		sed -i 's/GRUB_THEME=.*/GRUB_THEME=radiance/g' /etc/default/burg
 		sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=3/g' /etc/default/burg
-
         fi
 
 	if [ -x $( which update-burg ) ]; then
 		update-burg
+		EXITO "GRUB migrado a BURG con éxito"
 	fi
 
 	;;
@@ -72,7 +83,7 @@ case ${1} in
 
         *)
 
-                echo "postinst no reconoce el argumento '"${1}"'" >&2
+                ERROR "postinst no reconoce el argumento '"${1}"'" >&2
                 exit 1
 
         ;;
