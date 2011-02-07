@@ -29,7 +29,7 @@ install:
 	cp -r gtk/canaima-gtk $(DESTDIR)/usr/share/themes/
 
 	mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual/
-	cp -r arte/* $(DESTDIR)/usr/share/canaima-estilo-visual/
+	ln -s $(DESTDIR)/usr/share/images/desktop-base $(DESTDIR)/usr/share/canaima-estilo-visual/fondos
 
 uninstall:
 
