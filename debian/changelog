@@ -1,3 +1,12 @@
+canaima-estilo-visual (3.0+23) unstable; urgency=low
+
+  * [338a8eb] Removiendo los fondos de acá, ya que también están en
+    desktop-base
+  * [d12c2a1] Creando conflictos con grub, agregando update-burg al
+    postinst
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Mon, 07 Feb 2011 13:32:26 -0430
+
 canaima-estilo-visual (3.0+22) unstable; urgency=low
 
   * [ba4ac9f] Agregando script para configurar burg
