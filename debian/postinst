@@ -73,6 +73,7 @@ case ${1} in
 	fi
 
 	if [ -x $( which update-gconf-defaults ) ]; then
+		ADVERTENCIA "Renovando configuración del gconf ..."
 		update-gconf-defaults
 	fi
 
@@ -86,13 +87,11 @@ case ${1} in
 		case  $( grep "${usuario_min}:.*:.*:.*:.*:.*:::" /etc/shadow ) in
 
 			'')
-			# No hace nada si no se encuentra en /etc/shadow
+				# No hace nada si no se encuentra en /etc/shadow
 			;;
 
 			*)
-				ADVERTENCIA "Renovando configuración del gconf ..."
 				rm -rf ${usuario}/.gconf*
-				killall gnome-panel
 			;;
 		esac
 	done
