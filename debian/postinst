@@ -46,10 +46,6 @@ case ${1} in
 
 	ADVERTENCIA "Migrando Grub a Burg ..."
 
-	if [ -x /usr/share/update-notifier/notify-reboot-required ]; then
-	        /usr/share/update-notifier/notify-reboot-required
-	fi
-
 	if [ -e /usr/sbin/update-grub ]; then
 		mv /usr/sbin/update-grub /usr/sbin/update-grub.backup
 		ln -s /usr/sbin/update-burg /usr/sbin/update-grub
@@ -69,24 +65,53 @@ case ${1} in
 		sed -i 's/GRUB_GFXMODE=.*/GRUB_GFXMODE=1024x768/g' /etc/default/burg
 		sed -i 's/GRUB_THEME=.*/GRUB_THEME=radiance/g' /etc/default/burg
 		sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=3/g' /etc/default/burg
-        fi
+	fi
 
 	if [ -x $( which update-burg ) ]; then
 		update-burg
 		EXITO "GRUB migrado a BURG con éxito"
 	fi
 
+	if [ -x $( which update-gconf-defaults ) ]; then
+		update-gconf-defaults
+	fi
+
+	# Para cada usuario en /home/ ...
+	for usuario in /home/*? ; do
+
+		# Obteniendo sólo el nombre del usuario
+		usuario_min=$(basename ${usuario})
+
+		# Y en caso de que el usuario sea un usuario activo (existente en /etc/shadow) ...
+		case  $( grep "${usuario_min}:.*:.*:.*:.*:.*:::" /etc/shadow ) in
+
+			'')
+			# No hace nada si no se encuentra en /etc/shadow
+			;;
+
+			*)
+				ADVERTENCIA "Renovando configuración del gconf ..."
+				rm -rf ${usuario}/.gconf*
+				killall gnome-panel
+			;;
+		esac
+	done
+
+	if [ -x /usr/share/update-notifier/notify-reboot-required ]; then
+		/usr/share/update-notifier/notify-reboot-required
+	fi
+
 	;;
 
-        abort-upgrade|abort-remove|abort-deconfigure)
-        ;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+	;;
 
-        *)
+	*)
 
-                ERROR "postinst no reconoce el argumento '"${1}"'" >&2
-                exit 1
+		ERROR "postinst no reconoce el argumento '"${1}"'" >&2
+		exit 1
 
-        ;;
+	;;
 
 esac
 
