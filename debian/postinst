@@ -67,11 +67,6 @@ case ${1} in
 		sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=3/g' /etc/default/burg
 	fi
 
-	if [ -x $( which update-burg ) ]; then
-		update-burg
-		EXITO "GRUB migrado a BURG con éxito"
-	fi
-
 	if [ -x $( which update-gconf-defaults ) ]; then
 		ADVERTENCIA "Renovando configuración del gconf ..."
 		update-gconf-defaults
