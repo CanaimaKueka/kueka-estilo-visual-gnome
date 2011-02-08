@@ -3,8 +3,10 @@ canaima-estilo-visual (3.0+24) unstable; urgency=low
   * [d21ef2d] Agregando banners nuevos, mejorando scripts del
     mantenedor.
   * [6a61ab8] Corrigiendo Makefile
+  * [6a3e7c5] Asegurando que la configuración de gconf es aceptada por
+    todos los usuarios de sistema
 
- -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Mon, 07 Feb 2011 19:43:43 -0430
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Mon, 07 Feb 2011 23:46:36 -0430
 
 canaima-estilo-visual (3.0+23) unstable; urgency=low
 
