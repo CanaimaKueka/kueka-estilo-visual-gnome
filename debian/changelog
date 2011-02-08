@@ -1,3 +1,10 @@
+canaima-estilo-visual (3.0+28) unstable; urgency=low
+
+  * [166fd9b] Quitando conflicts con GRUB, genera error en canaima-
+    semilla
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 08 Feb 2011 09:38:06 -0430
+
 canaima-estilo-visual (3.0+27) unstable; urgency=low
 
   * [0da4832] Removiendo update-grub
