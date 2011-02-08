@@ -1,3 +1,11 @@
+canaima-estilo-visual (3.0+24) unstable; urgency=low
+
+  * [d21ef2d] Agregando banners nuevos, mejorando scripts del
+    mantenedor.
+  * [6a61ab8] Corrigiendo Makefile
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Mon, 07 Feb 2011 19:43:43 -0430
+
 canaima-estilo-visual (3.0+23) unstable; urgency=low
 
   * [338a8eb] Removiendo los fondos de acá, ya que también están en
