@@ -16,7 +16,7 @@
 # términos de la Licencia Pública General de GNU (versión 3).
 
 PKG="canaima-estilo-visual"
-21_QUITAR="/etc/grub.d/05_debian_theme /etc/grub.d/10_linux /usr/lib/mime/packages/openoffice.org-calc /usr/lib/mime/packages/openoffice.org-impress /usr/lib/mime/packages/openoffice.org-writer /usr/share/themes/Clearlooks /usr/share/splashy /usr/share/doc/canaima-estilo-visual /usr/share/canaima-estilo-visual /usr/share/gconf/defaults/90_canaima*"
+QUITAR="/etc/grub.d/05_debian_theme /etc/grub.d/10_linux /usr/lib/mime/packages/openoffice.org-calc /usr/lib/mime/packages/openoffice.org-impress /usr/lib/mime/packages/openoffice.org-writer /usr/share/themes/Clearlooks /usr/share/splashy /usr/share/doc/canaima-estilo-visual /usr/share/canaima-estilo-visual /usr/share/gconf/defaults/90_canaima-panel.entries /usr/share/gconf/defaults/90_canaima-estilo-visual /usr/share/gconf/defaults/90_canaima-aplicaciones"
 
 # Color Verde
 VERDE="\e[1;32m"
@@ -56,7 +56,7 @@ case ${1} in
 			dpkg-divert --package ${PKG} --remove --rename --divert /var/lib/${PKG}/diverts/grub /etc/default/grub
 
 			ADVERTENCIA "Limpiando configuraciones obsoletas de Canaima 2.1"
-			for LIMPIEZA in ${21_QUITAR}; do
+			for LIMPIEZA in ${QUITAR}; do
 				rm -rf ${LIMPIEZA}
 				echo "Removiendo ${LIMPIEZA} ..."
 			done    
