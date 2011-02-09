@@ -67,6 +67,10 @@ case ${1} in
 		sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=3/g' /etc/default/burg
 	fi
 
+	if [ -e /etc/gdm3/greeter.gconf-defaults ]; then
+		sed -i 's/\/apps\/gdm\/simple-greeter\/logo_icon_name.*/\/apps\/gdm\/simple-greeter\/logo_icon_name\t\tstart-here/g' /etc/gdm3/greeter.gconf-defaults
+	fi
+
 	if [ -x $( which update-gconf-defaults ) ]; then
 		ADVERTENCIA "Renovando configuración del gconf ..."
 		update-gconf-defaults
