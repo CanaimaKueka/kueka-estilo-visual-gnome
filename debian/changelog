@@ -1,8 +1,8 @@
 canaima-estilo-visual (3.0+29) unstable; urgency=low
 
-  * [fc35db2] Nueva Versión
+  * [fc35db2] Añadiendo línea para corregir el debian swirl en el greeter de gdm3
 
- -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Wed, 09 Feb 2011 16:59:35 -0430
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Wed, 09 Feb 2011 17:09:25 -0430
 
 canaima-estilo-visual (3.0+28) unstable; urgency=low
 
