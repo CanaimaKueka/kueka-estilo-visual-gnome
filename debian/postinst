@@ -69,6 +69,8 @@ case ${1} in
 
 	if [ -e /etc/gdm3/greeter.gconf-defaults ]; then
 		sed -i 's/\/apps\/gdm\/simple-greeter\/logo_icon_name.*/\/apps\/gdm\/simple-greeter\/logo_icon_name\t\tstart-here/g' /etc/gdm3/greeter.gconf-defaults
+	else
+		echo "/apps/gdm/simple-greeter/logo_icon_name		start-here" > /etc/gdm3/greeter.gconf-defaults
 	fi
 
 	if [ -x $( which update-gconf-defaults ) ]; then
