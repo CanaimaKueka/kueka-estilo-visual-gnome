@@ -1,3 +1,11 @@
+canaima-estilo-visual (3.0+31) unstable; urgency=low
+
+  * [f198acc] Reestableciendo gnome-panel a su estado anterior,
+    agregando pre-dependencias a debian/control, mejorando
+    postinstalación
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Mon, 21 Feb 2011 14:56:19 -0430
+
 canaima-estilo-visual (3.0+30) unstable; urgency=low
 
   * [0545d6c] Agregando pre-dependencia de gdm3, necesitamos que ya
