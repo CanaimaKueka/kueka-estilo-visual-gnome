@@ -65,14 +65,13 @@ case ${1} in
 		sed -i 's/GRUB_GFXMODE=.*/GRUB_GFXMODE=1024x768/g' /etc/default/burg
 		sed -i 's/GRUB_THEME=.*/GRUB_THEME=radiance/g' /etc/default/burg
 		sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=3/g' /etc/default/burg
+		sed -i 's/GRUB_DISTRIBUTOR=.*/GRUB_DISTRIBUTOR="Canaima"/g' /etc/default/burg
+		sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"/g' /etc/default/burg
+		sed -i 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX="splash quiet vga=791"/g' /etc/default/burg
 	fi
 
 	if [ -e /etc/gdm3/greeter.gconf-defaults ]; then
 		sed -i 's/\/apps\/gdm\/simple-greeter\/logo_icon_name.*/\/apps\/gdm\/simple-greeter\/logo_icon_name\t\tstart-here/g' /etc/gdm3/greeter.gconf-defaults
-	fi
-
-	if [ -x /usr/share/update-notifier/notify-reboot-required ]; then
-		/usr/share/update-notifier/notify-reboot-required
 	fi
 
 	;;
