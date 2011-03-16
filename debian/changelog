@@ -1,3 +1,10 @@
+canaima-estilo-visual (3.0+35) unstable; urgency=low
+
+  * [ced8179] Mejorando la forma que se especifican las cosas en
+    /etc/default/burg
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Wed, 16 Mar 2011 05:46:45 -0430
+
 canaima-estilo-visual (3.0+34) unstable; urgency=low
 
   * [be7b136] Agregando dependencia a canaima-escritorio-gnome
