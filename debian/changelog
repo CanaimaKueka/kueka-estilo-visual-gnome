@@ -1,3 +1,9 @@
+canaima-estilo-visual (3.0+36) unstable; urgency=low
+
+  * [7f1dd70] Quitando burg de las dependencias.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 18 Mar 2011 11:47:32 -0430
+
 canaima-estilo-visual (3.0+35) unstable; urgency=low
 
   * [ced8179] Mejorando la forma que se especifican las cosas en
