@@ -1,3 +1,10 @@
+canaima-estilo-visual (3.0+37) unstable; urgency=low
+
+  * [5001309] [ canaima-desarrollador ] Los siguientes archivos han sido
+    modificados/añadidos: postinst
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 18 Mar 2011 12:14:37 -0430
+
 canaima-estilo-visual (3.0+36) unstable; urgency=low
 
   * [7f1dd70] Quitando burg de las dependencias.
