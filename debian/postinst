@@ -47,6 +47,7 @@ case ${1} in
 	ADVERTENCIA "Migrando Grub a Burg ..."
 
 	[ ! -e /usr/sbin/update-burg ] && echo "#!/bin/bash" > /usr/sbin/update-burg
+	chmod +x /usr/sbin/update-burg
 
 	if [ -e /usr/sbin/update-grub ]; then
 		mv /usr/sbin/update-grub /usr/sbin/update-grub.backup
