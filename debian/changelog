@@ -1,3 +1,9 @@
+canaima-estilo-visual (3.0+40) unstable; urgency=low
+
+  * [f0d53d7] deshabilitando bloqueo de la sesion en vivo
+
+ -- Carlos Guerrero <guerrerocarlos@gmail.com>  Sun, 27 Mar 2011 17:16:10 -0430
+
 canaima-estilo-visual (3.0+39) unstable; urgency=low
 
   * [ec1e9d6] [ canaima-desarrollador ] Los siguientes archivos han sido
