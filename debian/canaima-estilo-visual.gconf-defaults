@@ -2,7 +2,6 @@
 /desktop/gnome/interface/gtk_theme canaima-gtk
 /desktop/gnome/interface/icon_theme canaima-iconos
 /desktop/gnome/peripherals/mouse/cursor_theme canaima-cursores
-/desktop/gnome/lockdown/disable_lock_screen true
 /apps/gnome-session/options/show_splash_screen false
 /apps/gdm/simple-greeter/logo_icon_name start-here
 
