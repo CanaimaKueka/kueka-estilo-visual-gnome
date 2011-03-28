@@ -1,3 +1,11 @@
+canaima-estilo-visual (3.0+41) unstable; urgency=low
+
+  * [0ff97bf] Merge branches 'master' and 'upstream' of
+    gitorious.org:canaima-gnu-linux/canaima-estilo-visual
+  * [e9a4255] Dejando que se bloquee la pantalla.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Mon, 28 Mar 2011 06:04:35 -0430
+
 canaima-estilo-visual (3.0+40) unstable; urgency=low
 
   * [f0d53d7] deshabilitando bloqueo de la sesion en vivo
