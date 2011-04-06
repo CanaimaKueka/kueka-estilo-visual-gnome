@@ -1,8 +1,13 @@
 canaima-estilo-visual (3.0+42) unstable; urgency=low
 
+  [ Sasha Veronica Solano Grosjean ]
   * [a0d2710] cambios archivo para que edite el /etc/burg.d/10_linux
 
- -- Sasha Veronica Solano Grosjean <sashasolano@gmail.com>  Mon, 28 Mar 2011 10:27:45 -0430
+  [ Luis Alejandro Martínez Faneyth ]
+  * [8fac4c7] Corrigiendo valores de GRUB_CMDLINE_LINUX_DEFAULT y
+    GRUB_CMDLINE_LINUX.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Wed, 06 Apr 2011 06:27:53 -0430
 
 canaima-estilo-visual (3.0+41) unstable; urgency=low
 
