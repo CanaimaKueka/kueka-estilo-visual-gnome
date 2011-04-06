@@ -69,8 +69,8 @@ case ${1} in
 		sed -i 's/GRUB_THEME=.*/GRUB_THEME=radiancetext/g' /etc/default/burg
 		sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=3/g' /etc/default/burg
 		sed -i 's/GRUB_DISTRIBUTOR=.*/GRUB_DISTRIBUTOR="Canaima"/g' /etc/default/burg
-		sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"/g' /etc/default/burg
-		sed -i 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX="splash quiet vga=791"/g' /etc/default/burg
+		sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash vga=791"/g' /etc/default/burg
+		sed -i 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX=""/g' /etc/default/burg
 	fi
 	if [ -e /etc/burg.d/10_linux ]; then
 		sed -i 's/%s, with Linux %s (recovery mode)/%s (Restaurar)/g' /etc/burg.d/10_linux
