@@ -15,6 +15,7 @@
 /desktop/gnome/url-handlers/https/command	"cunaguaro %s"
 /desktop/gnome/url-handlers/unknown/command	"cunaguaro %s"
 /desktop/gnome/url-handlers/mailto/command	"guacharo"
+/desktop/gnome/applications/media/exec		"exaile"
 
 /desktop/gnome/peripherals/keyboard/xkb/model pc105
 /desktop/gnome/peripherals/keyboard/kbd/layouts '[latam,es]'

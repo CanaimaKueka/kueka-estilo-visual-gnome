@@ -29,7 +29,6 @@ FIN="\e[0m"
 
 function ERROR() {
 echo -e ${ROJO}${1}${FIN}
-exit 1
 }
 
 function ADVERTENCIA() {
@@ -72,12 +71,12 @@ case ${1} in
 		sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash vga=791"/g' /etc/default/burg
 		sed -i 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX=""/g' /etc/default/burg
 	fi
+
 	if [ -e /etc/burg.d/10_linux ]; then
 		sed -i 's/%s, with Linux %s (recovery mode)/%s (Restaurar)/g' /etc/burg.d/10_linux
 		sed -i 's/%s, with Linux %s/%s/g' /etc/burg.d/10_linux
                 sed -i 's/"${os}" //g' /etc/burg.d/10_linux
 	fi
-
 
 	if [ -e /etc/gdm3/greeter.gconf-defaults ]; then
 		sed -i 's/\/apps\/gdm\/simple-greeter\/logo_icon_name.*/\/apps\/gdm\/simple-greeter\/logo_icon_name\t\tstart-here/g' /etc/gdm3/greeter.gconf-defaults
