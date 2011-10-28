@@ -1,3 +1,9 @@
+canaima-estilo-visual-gnome (3.1-3) stable; urgency=low
+
+  * [4db4999] Corrigiendo debian/rules con el nuevo nombre del paquete.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 02:00:41 -0430
+
 canaima-estilo-visual-gnome (3.1-2) stable; urgency=low
 
   * [687c4e0] Cambiando nombre al paquete.
