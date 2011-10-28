@@ -1,3 +1,9 @@
+canaima-estilo-visual-gnome (3.1-6) stable; urgency=low
+
+  * [5cbf90f] Removiendo script de ayuda.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 14:54:05 -0430
+
 canaima-estilo-visual-gnome (3.1-5) stable; urgency=low
 
   * [d441f8c] Cambiando el nombre a canaima-estilo-visual-gnome.
