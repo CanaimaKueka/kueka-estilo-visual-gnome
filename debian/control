@@ -1,4 +1,4 @@
-Source: canaima-estilo-visual
+Source: canaima-estilo-visual-gnome
 Section: misc
 Priority: optional
 Maintainer: Equipo de Desarrollo de Canaima GNU/Linux <desarrolladores@canaima.softwarelibre.gob.ve>
@@ -9,9 +9,9 @@ Homepage: http://canaima.softwarelibre.gob.ve/
 Vcs-Git: git://gitorious.org/canaima-gnu-linux/canaima-estilo-visual.git
 Vcs-Browser: http://gitorious.org/canaima-gnu-linux/canaima-estilo-visual/trees/master
 
-Package: canaima-estilo-visual
+Package: canaima-estilo-visual-gnome
 Architecture: all
-Depends: gtk2-engines-pixbuf, gtk2-engines-equinox, canaima-estilo-visual-iconos (>= 3.1), canaima-plymouth, ${shlibs:Depends}, ${misc:Depends}
+Depends: gtk2-engines-pixbuf, gtk2-engines-equinox, canaima-estilo-visual-iconos-gnome (>= 3.1), canaima-plymouth, ${shlibs:Depends}, ${misc:Depends}
 Pre-Depends: gdm3
 Recommends: burg
 Description: Estilo visual de Canaima para GNOME
