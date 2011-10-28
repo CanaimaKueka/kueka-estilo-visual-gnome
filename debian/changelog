@@ -1,3 +1,9 @@
+canaima-estilo-visual-gnome (3.1-5) stable; urgency=low
+
+  * [d441f8c] Cambiando el nombre a canaima-estilo-visual-gnome.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 14:51:14 -0430
+
 canaima-estilo-visual-gnome (3.1-4) stable; urgency=low
 
   * [97d38fe] Agregando Replaces a canaima-estilo-visual para mantener
