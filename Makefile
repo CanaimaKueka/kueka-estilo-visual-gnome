@@ -31,8 +31,8 @@ install:
 	cp -r metacity/canaima-metacity $(DESTDIR)/usr/share/themes/
 	cp -r gtk/canaima-gtk $(DESTDIR)/usr/share/themes/
 
-	mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual/
-	cp -r arte $(DESTDIR)/usr/share/canaima-estilo-visual/
+	mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual/arte/
+	cp -r arte/*.png $(DESTDIR)/usr/share/canaima-estilo-visual/arte/
 	ln -s /usr/share/images/desktop-base $(DESTDIR)/usr/share/canaima-estilo-visual/fondos
 
 uninstall:

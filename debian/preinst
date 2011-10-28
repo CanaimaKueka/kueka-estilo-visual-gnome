@@ -16,51 +16,10 @@
 # términos de la Licencia Pública General de GNU (versión 3).
 
 PKG="canaima-estilo-visual"
-QUITAR="/etc/grub.d/05_debian_theme /etc/grub.d/10_linux /usr/lib/mime/packages/openoffice.org-calc /usr/lib/mime/packages/openoffice.org-impress /usr/lib/mime/packages/openoffice.org-writer /usr/share/themes/Clearlooks /usr/share/splashy /usr/share/doc/canaima-estilo-visual /usr/share/canaima-estilo-visual /usr/share/gconf/defaults/90_canaima-panel.entries /usr/share/gconf/defaults/90_canaima-estilo-visual /usr/share/gconf/defaults/90_canaima-aplicaciones"
-
-# Color Verde
-VERDE="\e[1;32m"
-# Color Rojo
-ROJO="\e[1;31m"
-# Color Amarillo
-AMARILLO="\e[1;33m"
-# Negrita
-BOLD="\e[1m"
-# Caracter de fin de línea
-FIN="\e[0m"
-
-function ERROR() {
-echo -e ${ROJO}${1}${FIN}
-exit 1
-}
-
-function ADVERTENCIA() {
-echo -e ${AMARILLO}${1}${FIN}
-}
-
-function EXITO() {
-echo -e ${VERDE}${1}${FIN}
-}
 
 case ${1} in
 
         install|upgrade)
-
-
-                # ---- Limpieza de configuraciones anteriores y residuos de Canaima 2.1 ------------------------------------#
-                # ==========================================================================================================#
-
-		if [ "$(dpkg-query -s ${PKG} | grep Status)" == "Status: install ok installed" ] && [ "$(dpkg-query -s ${PKG} | grep 'Version: 2.')" != '' ]; then
-			ADVERTENCIA "Removiendo diverts de Canaima 2.1"
-			dpkg-divert --package ${PKG} --remove --rename --divert /var/lib/${PKG}/diverts/gtkrc /usr/share/themes/Clearlooks/gtk-2.0/gtkrc
-			dpkg-divert --package ${PKG} --remove --rename --divert /var/lib/${PKG}/diverts/grub /etc/default/grub
-
-			ADVERTENCIA "Limpiando configuraciones obsoletas de Canaima 2.1"
-			for LIMPIEZA in ${QUITAR}; do
-				rm -rf ${LIMPIEZA}
-				echo "Removiendo ${LIMPIEZA} ..."
-			done    
-		fi
 	;;
 
         abort-upgrade)
