@@ -6,15 +6,15 @@ Uploaders: Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.9.1
 Homepage: http://canaima.softwarelibre.gob.ve/
-Vcs-Git: git://gitorious.org/canaima-gnu-linux/canaima-estilo-visual.git
-Vcs-Browser: http://gitorious.org/canaima-gnu-linux/canaima-estilo-visual/trees/master
+Vcs-Git: git://gitorious.org/canaima-gnu-linux/canaima-estilo-visual-gnome.git
+Vcs-Browser: http://gitorious.org/canaima-gnu-linux/canaima-estilo-visual-gnome/trees/master
 
 Package: canaima-estilo-visual-gnome
 Architecture: all
 Depends: gtk2-engines-pixbuf, gtk2-engines-equinox, canaima-estilo-visual-iconos-gnome (>= 3.1), canaima-plymouth, ${shlibs:Depends}, ${misc:Depends}
 Pre-Depends: gdm3
 Recommends: burg
-Replaces: canaima-estilo-visual (>= 3.0)
+Replaces: canaima-estilo-visual-gnome (>= 3.0)
 Description: Estilo visual de Canaima para GNOME
  Este paquete provee el estilo visual (tema de GTK, metacity,
  fondos de escritorio y BURG) para Canaima GNU/Linux.
