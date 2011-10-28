@@ -1,3 +1,9 @@
+canaima-estilo-visual-gnome (3.1-7) stable; urgency=low
+
+  * [1835d66] Corrigiendo dependencia en Replaces.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 15:00:53 -0430
+
 canaima-estilo-visual-gnome (3.1-6) stable; urgency=low
 
   * [5cbf90f] Removiendo script de ayuda.
