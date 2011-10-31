@@ -1,3 +1,12 @@
+canaima-estilo-visual (3.0+44) unstable; urgency=low
+
+  * [21f507d] Agregando dependencias a burg y conflicts con grub
+  * [59cbf3b] Agregando update-alternatives de update-grub a update-burg
+    para mejorar la forma que uno sustituye al otro
+  * [146e70b] Quitando cdbs como Build-Depends
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Mon, 31 Oct 2011 18:13:40 -0430
+
 canaima-estilo-visual (3.0+43) unstable; urgency=low
 
   * [df9fd7f] Agregando Exaile como aplicación preferida mediante gconf.
