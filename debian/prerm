@@ -20,6 +20,10 @@ PKG="canaima-estilo-visual"
 case ${1} in
 
 	remove|upgrade|deconfigure)
+
+		update-alternatives --remove bootloader /usr/sbin/update-burg
+		update-alternatives --remove bootloader2 /usr/sbin/update-burg
+
 	;;
 
 	failed-upgrade)

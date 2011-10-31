@@ -59,8 +59,17 @@ case ${1} in
 			for LIMPIEZA in ${QUITAR}; do
 				rm -rf ${LIMPIEZA}
 				echo "Removiendo ${LIMPIEZA} ..."
-			done    
+			done
 		fi
+
+		if [ -e /usr/sbin/update-grub.backup ]; then
+			rm /usr/sbin/update-grub.backup
+		fi
+
+		if [ -e /usr/sbin/update-grub2.backup ]; then
+			rm /usr/sbin/update-grub2.backup
+		fi
+
 	;;
 
         abort-upgrade)

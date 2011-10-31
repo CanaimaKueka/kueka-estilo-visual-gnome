@@ -44,19 +44,8 @@ case ${1} in
 	configure)
 
 	ADVERTENCIA "Migrando Grub a Burg ..."
-
-	[ ! -e /usr/sbin/update-burg ] && echo "#!/bin/bash" > /usr/sbin/update-burg
-	chmod +x /usr/sbin/update-burg
-
-	if [ -e /usr/sbin/update-grub ]; then
-		mv /usr/sbin/update-grub /usr/sbin/update-grub.backup
-		ln -s /usr/sbin/update-burg /usr/sbin/update-grub
-	fi
-
-	if [ -e /usr/sbin/update-grub2 ]; then
-		mv /usr/sbin/update-grub2 /usr/sbin/update-grub2.backup
-		ln -s /usr/sbin/update-burg /usr/sbin/update-grub2
-	fi
+	update-alternatives --install /usr/sbin/update-grub bootloader /usr/sbin/update-burg
+	update-alternatives --install /usr/sbin/update-grub2 bootloader2 /usr/sbin/update-burg
 
 	if [ $( cat /etc/kernel-img.conf | grep "postinst_hook = update-burg" | wc -l ) == 0 ];	then
 		echo "postinst_hook = update-burg" >> /etc/kernel-img.conf
