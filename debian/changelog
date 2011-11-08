@@ -1,3 +1,10 @@
+canaima-estilo-visual (3.0+47) unstable; urgency=low
+
+  * [b1c31c9] Agregando GRUB al provides del paquete para marcar su
+    desinstalación automática
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 08 Nov 2011 11:50:25 -0430
+
 canaima-estilo-visual (3.0+46) unstable; urgency=low
 
   * [eadbeaf] Agregando GRUB al replaces del paquete para marcar su
