@@ -13,9 +13,9 @@ Package: canaima-estilo-visual
 Architecture: all
 Depends: gtk2-engines-pixbuf, gtk2-engines-equinox, canaima-estilo-visual-iconos (>= 3.0), canaima-plymouth, ${shlibs:Depends}, ${misc:Depends}
 Pre-Depends: gdm3, burg, burg-pc, burg-common
-Conflicts: grub, grub-pc, grub-common
-Replaces: grub, grub-pc, grub-common
-Provides: grub, grub-pc, grub-common
+Conflicts: grub-pc
+Replaces: grub-pc
+Provides: grub-pc
 Description: Estilo visual de Canaima GNU/Linux
  Este paquete provee el estilo visual (tema de GTK, metacity,
  fondos de escritorio y BURG) para Canaima GNU/Linux.
