@@ -1,3 +1,10 @@
+canaima-estilo-visual (3.0+49) unstable; urgency=low
+
+  * [12772ed] Agregando grub-common al Conflicts, Replaces y Provides
+    para marcar su instalación automática
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 08 Nov 2011 12:04:14 -0430
+
 canaima-estilo-visual (3.0+48) unstable; urgency=low
 
   * [96a1a10] Reduciendo los cambios sólo al paquete grub-pc
