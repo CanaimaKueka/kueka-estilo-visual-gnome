@@ -1,3 +1,11 @@
+canaima-estilo-visual (3.0+51) unstable; urgency=low
+
+  * [b1e8ca3] Borrando parche de prueba
+  * [89008f5] Agregando dependencia a desktop-base, para evitar
+    omisiones.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 22 Nov 2011 11:29:46 -0430
+
 canaima-estilo-visual (3.0+50) unstable; urgency=low
 
   * [c2cb527] Corrigiendo dependencias para evitar rompimiento de la
