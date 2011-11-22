@@ -12,10 +12,8 @@ Vcs-Browser: http://gitorious.org/canaima-gnu-linux/canaima-estilo-visual/trees/
 Package: canaima-estilo-visual
 Architecture: all
 Depends: gtk2-engines-pixbuf, gtk2-engines-equinox, canaima-estilo-visual-iconos (>= 3.0), canaima-plymouth, ${shlibs:Depends}, ${misc:Depends}
-Pre-Depends: gdm3, burg, burg-pc, burg-common
-Conflicts: grub-pc, grub-common
-Replaces: grub-pc, grub-common
-Provides: grub-pc, grub-common
+Pre-Depends: gdm3
+Recommends: burg
 Description: Estilo visual de Canaima GNU/Linux
  Este paquete provee el estilo visual (tema de GTK, metacity,
  fondos de escritorio y BURG) para Canaima GNU/Linux.
