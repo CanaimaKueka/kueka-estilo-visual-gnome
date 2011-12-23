@@ -1,3 +1,37 @@
+canaima-estilo-visual-gnome (3.1-9) stable; urgency=low
+
+  * [21f507d] Agregando dependencias a burg y conflicts con grub
+  * [59cbf3b] Agregando update-alternatives de update-grub a update-burg
+    para mejorar la forma que uno sustituye al otro
+  * [146e70b] Quitando cdbs como Build-Depends
+  * [0934502] Nueva versión
+  * [b9cb328] Corrigiendo sintaxis de update-alternatives.
+  * [7e83157] Nueva versión
+  * [eadbeaf] Agregando GRUB al replaces del paquete para marcar su
+    desinstalación automática
+  * [74befde] Nueva versión
+  * [b1c31c9] Agregando GRUB al provides del paquete para marcar su
+    desinstalación automática
+  * [d93d467] Nueva versión
+  * [96a1a10] Reduciendo los cambios sólo al paquete grub-pc
+  * [daba6e8] Nueva versión
+  * [12772ed] Agregando grub-common al Conflicts, Replaces y Provides
+    para marcar su instalación automática
+  * [d102aec] Nueva versión
+  * [c2cb527] Corrigiendo dependencias para evitar rompimiento de la
+    creación de las ISO
+  * [3b65f51] Nueva versión
+  * [b1e8ca3] Borrando parche de prueba
+  * [89008f5] Agregando dependencia a desktop-base, para evitar
+    omisiones.
+  * [21f40de] Nueva versión
+  * [d42ad10] Cambiando la disposición de los paneles en gconf-defaults.
+    Ajustando scripts del mantenedor y dependencias Cambiando color
+    background de elementos seleccionados
+  * [f0303c7] Agregando dependencia a gtk2-engines
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 23 Dec 2011 12:16:04 -0430
+
 canaima-estilo-visual-gnome (3.1-8) stable; urgency=low
 
   * [49a7364] Agregando Conflicts con canaima-estilo-visual.
