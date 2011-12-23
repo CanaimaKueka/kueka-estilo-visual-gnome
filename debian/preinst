@@ -34,25 +34,7 @@ case ${1} in
 					rm -rf ${HOME_U}/.gconf
 				fi
 			done
-
-<<<<<<< HEAD
-			ADVERTENCIA "Limpiando configuraciones obsoletas de Canaima 2.1"
-			for LIMPIEZA in ${QUITAR}; do
-				rm -rf ${LIMPIEZA}
-				echo "Removiendo ${LIMPIEZA} ..."
-			done
-=======
->>>>>>> mondongo
 		fi
-
-		if [ -e /usr/sbin/update-grub.backup ]; then
-			rm /usr/sbin/update-grub.backup
-		fi
-
-		if [ -e /usr/sbin/update-grub2.backup ]; then
-			rm /usr/sbin/update-grub2.backup
-		fi
-
 	;;
 
 	abort-upgrade)
