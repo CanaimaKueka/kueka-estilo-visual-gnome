@@ -31,13 +31,12 @@ install:
 	cp -r metacity/canaima-metacity $(DESTDIR)/usr/share/themes/
 	cp -r gtk/canaima-gtk $(DESTDIR)/usr/share/themes/
 
-	mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual/
-	cp -r arte $(DESTDIR)/usr/share/canaima-estilo-visual/
-	ln -s /usr/share/images/desktop-base $(DESTDIR)/usr/share/canaima-estilo-visual/fondos
+	mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/arte/
+	cp -r arte/*.png $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/arte/
 
 uninstall:
 
-	rm -rf $(DESTDIR)/usr/share/canaima-estilo-visual/
+	rm -rf $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/
 	rm -rf $(DESTDIR)/usr/share/themes/canaima-metacity/
 	rm -rf $(DESTDIR)/usr/share/themes/canaima-gtk/
 

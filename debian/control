@@ -1,19 +1,29 @@
-Source: canaima-estilo-visual
+Source: canaima-estilo-visual-gnome
 Section: misc
 Priority: optional
 Maintainer: Equipo de Desarrollo de Canaima GNU/Linux <desarrolladores@canaima.softwarelibre.gob.ve>
-Uploaders: José Miguel Parrella Romero <jparrella@onuva.com>, Carlos David Marrero <cdmarrero2040@gmail.com>, Orlando Andrés Fiol Carballo <ofiol@indesoft.org.ve>, Carlos Alejandro Guerrero Mora <guerrerocarlos@gmail.com>, Diego Alberto Aguilera Zambrano <diegoaguilera85@gmail.com>, Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>, Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
+Uploaders: Randy Ortega <ortega571@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.9.1
 Homepage: http://canaima.softwarelibre.gob.ve/
-Vcs-Git: git://gitorious.org/canaima-gnu-linux/canaima-estilo-visual.git
-Vcs-Browser: http://gitorious.org/canaima-gnu-linux/canaima-estilo-visual/trees/master
+Vcs-Git: git://gitorious.org/canaima-gnu-linux/canaima-estilo-visual-gnome.git
+Vcs-Browser: http://gitorious.org/canaima-gnu-linux/canaima-estilo-visual-gnome/trees/master
 
-Package: canaima-estilo-visual
+Package: canaima-estilo-visual-gnome
 Architecture: all
-Depends: gtk2-engines-pixbuf, gtk2-engines-equinox, canaima-estilo-visual-iconos (>= 3.0), canaima-plymouth, desktop-base (>= 6.0.5+canaima9),${shlibs:Depends}, ${misc:Depends}
+Depends:	gtk2-engines-pixbuf,
+		gtk2-engines-equinox,
+		canaima-estilo-visual-iconos-gnome (>= 3.1),
+		canaima-plymouth,
+		canaima-mod-burg,
+		canaima-salvapantalla,
+		canaima-escritorio-gnome (>= 3.1),
+		${shlibs:Depends},
+		${misc:Depends}
 Pre-Depends: gdm3
 Recommends: burg
-Description: Estilo visual de Canaima GNU/Linux
+Replaces: canaima-estilo-visual (>= 3.0)
+Conflicts: canaima-estilo-visual (>= 3.0)
+Description: Estilo visual de Canaima para GNOME
  Este paquete provee el estilo visual (tema de GTK, metacity,
  fondos de escritorio y BURG) para Canaima GNU/Linux.

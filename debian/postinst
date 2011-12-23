@@ -1,21 +1,18 @@
 #!/bin/bash -e
 #
 # ==============================================================================
-# PAQUETE: canaima-estilo-visual
+# PAQUETE: canaima-estilo-visual-gnome
 # ARCHIVO: postinst
 # DESCRIPCIÓN: Configura el sistema despues la instalación del paquete.
 # COPYRIGHT:
-#  (C) 2010 Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>
-#  (C) 2010 Diego Alberto Aguilera Zambrano <daguilera85@gmail.com>
-#  (C) 2010 Carlos Alejandro Guerrero Mora <guerrerocarlos@gmail.com>
-#  (C) 2010 Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
+#  (C) 2010 Randy Ortega <ortega571@gmail.com>
 # LICENCIA: GPL3
 # ==============================================================================
 #
 # Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los
 # términos de la Licencia Pública General de GNU (versión 3).
 
-PKG="canaima-estilo-visual"
+PKG="canaima-estilo-visual-gnome"
 # Color Verde
 VERDE="\e[1;32m"
 # Color Rojo
@@ -62,13 +59,13 @@ case ${1} in
 	fi
 
 	if [ -e /etc/burg.d/10_linux ]; then
-		sed -i 's/%s, with Linux %s (recovery mode)/%s (Restaurar)/g' /etc/burg.d/10_linux
+		sed -i 's/%s, with Linux %s (recovery mode)/%s (Consola)/g' /etc/burg.d/10_linux
 		sed -i 's/%s, with Linux %s/%s/g' /etc/burg.d/10_linux
                 sed -i 's/"${os}" //g' /etc/burg.d/10_linux
 	fi
 
 	if [ -e /etc/gdm3/greeter.gconf-defaults ]; then
-		sed -i 's/\/apps\/gdm\/simple-greeter\/logo_icon_name.*/\/apps\/gdm\/simple-greeter\/logo_icon_name\t\tstart-here/g' /etc/gdm3/greeter.gconf-defaults
+		sed -i 's|/apps/gdm/simple-greeter/logo_icon_name.*|/apps/gdm/simple-greeter/logo_icon_name\t\tstart-here|g' /etc/gdm3/greeter.gconf-defaults
 	fi
 
 	;;

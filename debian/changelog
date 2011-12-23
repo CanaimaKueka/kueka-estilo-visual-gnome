@@ -1,3 +1,52 @@
+canaima-estilo-visual-gnome (3.1-8) stable; urgency=low
+
+  * [49a7364] Agregando Conflicts con canaima-estilo-visual.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 16:53:38 -0430
+
+canaima-estilo-visual-gnome (3.1-7) stable; urgency=low
+
+  * [1835d66] Corrigiendo dependencia en Replaces.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 15:00:53 -0430
+
+canaima-estilo-visual-gnome (3.1-6) stable; urgency=low
+
+  * [5cbf90f] Removiendo script de ayuda.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 14:54:05 -0430
+
+canaima-estilo-visual-gnome (3.1-5) stable; urgency=low
+
+  * [d441f8c] Cambiando el nombre a canaima-estilo-visual-gnome.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 14:51:14 -0430
+
+canaima-estilo-visual-gnome (3.1-4) stable; urgency=low
+
+  * [97d38fe] Agregando Replaces a canaima-estilo-visual para mantener
+    compatibilidad hacia atrás con Canaima Popular 3.0.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 14:03:59 -0430
+
+canaima-estilo-visual-gnome (3.1-3) stable; urgency=low
+
+  * [4db4999] Corrigiendo debian/rules con el nuevo nombre del paquete.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 02:00:41 -0430
+
+canaima-estilo-visual-gnome (3.1-2) stable; urgency=low
+
+  * [687c4e0] Cambiando nombre al paquete.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 01:55:05 -0430
+
+canaima-estilo-visual-gnome (3.1-1) stable; urgency=low
+
+  * Versión inicial para Canaima 3.1
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 01:55:05 -0430
+
 canaima-estilo-visual (3.0+51) unstable; urgency=low
 
   * [b1e8ca3] Borrando parche de prueba
@@ -59,7 +108,7 @@ canaima-estilo-visual (3.0+43) unstable; urgency=low
 
   * [df9fd7f] Agregando Exaile como aplicación preferida mediante gconf.
 
- -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 15 Apr 2011 01:05:32 -0430
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 28 Oct 2011 01:19:21 -0430
 
 canaima-estilo-visual (3.0+42) unstable; urgency=low
 
