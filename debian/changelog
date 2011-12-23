@@ -30,8 +30,9 @@ canaima-estilo-visual-gnome (3.1-9) stable; urgency=low
     background de elementos seleccionados
   * [f0303c7] Agregando dependencia a gtk2-engines
   * [3efb6cd] Corrigiendo error en debian/preinst
+  * [c245a86] Removiendo pruebas para debian/prerm
 
- -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 23 Dec 2011 12:21:02 -0430
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Fri, 23 Dec 2011 12:28:59 -0430
 
 canaima-estilo-visual-gnome (3.1-8) stable; urgency=low
 
