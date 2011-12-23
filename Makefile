@@ -33,7 +33,6 @@ install:
 
 	mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/arte/
 	cp -r arte/*.png $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/arte/
-	ln -s /usr/share/images/desktop-base $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/fondos
 
 uninstall:
 

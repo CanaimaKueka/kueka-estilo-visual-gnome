@@ -2,7 +2,7 @@ Source: canaima-estilo-visual-gnome
 Section: misc
 Priority: optional
 Maintainer: Equipo de Desarrollo de Canaima GNU/Linux <desarrolladores@canaima.softwarelibre.gob.ve>
-Uploaders: Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>
+Uploaders: Randy Ortega <ortega571@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.9.1
 Homepage: http://canaima.softwarelibre.gob.ve/
@@ -11,7 +11,15 @@ Vcs-Browser: http://gitorious.org/canaima-gnu-linux/canaima-estilo-visual-gnome/
 
 Package: canaima-estilo-visual-gnome
 Architecture: all
-Depends: gtk2-engines-pixbuf, gtk2-engines-equinox, canaima-estilo-visual-iconos-gnome (>= 3.1), canaima-plymouth, ${shlibs:Depends}, ${misc:Depends}
+Depends:	gtk2-engines-pixbuf,
+		gtk2-engines-equinox,
+		canaima-estilo-visual-iconos-gnome (>= 3.1),
+		canaima-plymouth,
+		canaima-mod-burg,
+		canaima-salvapantalla,
+		canaima-escritorio-gnome (>= 3.1),
+		${shlibs:Depends},
+		${misc:Depends}
 Pre-Depends: gdm3
 Recommends: burg
 Replaces: canaima-estilo-visual (>= 3.0)

@@ -24,141 +24,116 @@
 /apps/nautilus/preferences/always_use_browser true
 
 # Entradas para modificar el estilo de los paneles
-/apps/panel/default_setup/general/toplevel_id_list [top_panel,bottom_panel]
-/apps/panel/default_setup/general/object_id_list [menu_bar_screen,browser_launcher,email_launcher,twitter_launcher]
-/apps/panel/default_setup/general/applet_id_list [show_desktop,window_list,mixer,clock,notification_area,workspace_switch]
+/apps/panel/default_setup/general/toplevel_id_list [bottom_panel]
+/apps/panel/default_setup/general/object_id_list [menu_bar_screen,browser_launcher,twitter_launcher]
+/apps/panel/default_setup/general/applet_id_list [show_desktop,window_list,mixer,clock,notification_area]
 
 /apps/panel/default_setup/objects/menu_bar_screen/locked true
-/apps/panel/default_setup/objects/menu_bar_screen/object_type menu-bar
+/apps/panel/default_setup/objects/menu_bar_screen/object_type menuobject
 /apps/panel/default_setup/objects/menu_bar_screen/position 0
-/apps/panel/default_setup/objects/menu_bar_screen/toplevel_id top_panel
+/apps/panel/default_setup/objects/menu_bar_screen/toplevel_id bottom_panel
 
 /apps/panel/default_setup/objects/browser_launcher/launcher_location cunaguaro.desktop
 /apps/panel/default_setup/objects/browser_launcher/locked true
-/apps/panel/default_setup/objects/browser_launcher/object_type launcher-object
+/apps/panel/default_setup/objects/browser_launcher/object_type launcherobject
 /apps/panel/default_setup/objects/browser_launcher/position 2
-/apps/panel/default_setup/objects/browser_launcher/toplevel_id top_panel
-
-/apps/panel/default_setup/objects/email_launcher/launcher_location guacharo.desktop
-/apps/panel/default_setup/objects/email_launcher/locked true
-/apps/panel/default_setup/objects/email_launcher/object_type launcher-object
-/apps/panel/default_setup/objects/email_launcher/position 3
-/apps/panel/default_setup/objects/email_launcher/toplevel_id top_panel
+/apps/panel/default_setup/objects/browser_launcher/toplevel_id bottom_panel
 
 /apps/panel/default_setup/objects/twitter_launcher/launcher_location turpial.desktop
 /apps/panel/default_setup/objects/twitter_launcher/locked true
-/apps/panel/default_setup/objects/twitter_launcher/object_type launcher-object
-/apps/panel/default_setup/objects/twitter_launcher/position 4
-/apps/panel/default_setup/objects/twitter_launcher/toplevel_id top_panel
+/apps/panel/default_setup/objects/twitter_launcher/object_type launcherobject
+/apps/panel/default_setup/objects/twitter_launcher/position 3
+/apps/panel/default_setup/objects/twitter_launcher/toplevel_id bottom_panel
 
 /apps/panel/default_setup/applets/show_desktop/bonobo_iid OAFIID:GNOME_ShowDesktopApplet
 /apps/panel/default_setup/applets/show_desktop/locked true
-/apps/panel/default_setup/applets/show_desktop/position 0
-/apps/panel/default_setup/applets/show_desktop/object_type bonobo-applet
+/apps/panel/default_setup/applets/show_desktop/position 1
+/apps/panel/default_setup/applets/show_desktop/object_type bonoboapplet
 /apps/panel/default_setup/applets/show_desktop/toplevel_id bottom_panel
 
 /apps/panel/default_setup/applets/window_list/bonobo_iid OAFIID:GNOME_WindowListApplet
 /apps/panel/default_setup/applets/window_list/locked true
-/apps/panel/default_setup/applets/window_list/position 1
-/apps/panel/default_setup/applets/window_list/object_type bonobo-applet
+/apps/panel/default_setup/applets/window_list/position 4
+/apps/panel/default_setup/applets/window_list/object_type bonoboapplet
 /apps/panel/default_setup/applets/window_list/toplevel_id bottom_panel
-
-/apps/panel/default_setup/applets/workspace_switch/bonobo_iid OAFIID:GNOME_WorkspaceSwitcherApplet
-/apps/panel/default_setup/applets/workspace_switch/locked true
-/apps/panel/default_setup/applets/workspace_switch/position 2
-/apps/panel/default_setup/applets/workspace_switch/panel_right_stick true
-/apps/panel/default_setup/applets/workspace_switch/object_type bonobo-applet
-/apps/panel/default_setup/applets/workspace_switch/toplevel_id bottom_panel
 
 /apps/panel/default_setup/applets/mixer/bonobo_iid OAFIID:GNOME_MixerApplet
 /apps/panel/default_setup/applets/mixer/locked true
 /apps/panel/default_setup/applets/mixer/position 5
 /apps/panel/default_setup/applets/mixer/panel_right_stick true
-/apps/panel/default_setup/applets/mixer/object_type bonobo-applet
-/apps/panel/default_setup/applets/mixer/toplevel_id top_panel
+/apps/panel/default_setup/applets/mixer/object_type bonoboapplet
+/apps/panel/default_setup/applets/mixer/toplevel_id bottom_panel
 
 /apps/panel/default_setup/applets/clock/bonobo_iid OAFIID:GNOME_ClockApplet
 /apps/panel/default_setup/applets/clock/locked true
 /apps/panel/default_setup/applets/clock/prefs/show_date false
 /apps/panel/default_setup/applets/clock/position 6
 /apps/panel/default_setup/applets/clock/panel_right_stick true
-/apps/panel/default_setup/applets/clock/object_type bonobo-applet
-/apps/panel/default_setup/applets/clock/toplevel_id top_panel
+/apps/panel/default_setup/applets/clock/object_type bonoboapplet
+/apps/panel/default_setup/applets/clock/toplevel_id bottom_panel
 
 /apps/panel/default_setup/applets/notification_area/bonobo_iid OAFIID:GNOME_NotificationAreaApplet
 /apps/panel/default_setup/applets/notification_area/locked true
 /apps/panel/default_setup/applets/notification_area/position 7
 /apps/panel/default_setup/applets/notification_area/panel_right_stick true
-/apps/panel/default_setup/applets/notification_area/object_type bonobo-applet
-/apps/panel/default_setup/applets/notification_area/toplevel_id top_panel
+/apps/panel/default_setup/applets/notification_area/object_type bonoboapplet
+/apps/panel/default_setup/applets/notification_area/toplevel_id bottom_panel
 
 
-/apps/panel/general0/toplevel_id_list [top_panel,bottom_panel]
-/apps/panel/general/object_id_list [menu_bar_screen0,browser_launcher0,email_launcher0,twitter_launcher0]
-/apps/panel/general/applet_id_list [show_desktop0,window_list0,mixer0,clock0,notification_area0,workspace_switch0]
+/apps/panel/general/toplevel_id_list [bottom_panel]
+/apps/panel/general/object_id_list [menu_bar_screen0,browser_launcher0,twitter_launcher0]
+/apps/panel/general/applet_id_list [show_desktop0,window_list0,mixer0,clock0,notification_area0]
 
 /apps/panel/objects/menu_bar_screen0/locked true
-/apps/panel/objects/menu_bar_screen0/object_type menu-bar
+/apps/panel/objects/menu_bar_screen0/object_type menuobject
 /apps/panel/objects/menu_bar_screen0/position 0
-/apps/panel/objects/menu_bar_screen0/toplevel_id top_panel
+/apps/panel/objects/menu_bar_screen0/toplevel_id bottom_panel
 
 /apps/panel/objects/browser_launcher0/launcher_location cunaguaro.desktop
 /apps/panel/objects/browser_launcher0/locked true
-/apps/panel/objects/browser_launcher0/object_type launcher-object
+/apps/panel/objects/browser_launcher0/object_type launcherobject
 /apps/panel/objects/browser_launcher0/position 2
-/apps/panel/objects/browser_launcher0/toplevel_id top_panel
-
-/apps/panel/objects/email_launcher0/launcher_location guacharo.desktop
-/apps/panel/objects/email_launcher0/locked true
-/apps/panel/objects/email_launcher0/object_type launcher-object
-/apps/panel/objects/email_launcher0/position 3
-/apps/panel/objects/email_launcher0/toplevel_id top_panel
+/apps/panel/objects/browser_launcher0/toplevel_id bottom_panel
 
 /apps/panel/objects/twitter_launcher0/launcher_location turpial.desktop
 /apps/panel/objects/twitter_launcher0/locked true
-/apps/panel/objects/twitter_launcher0/object_type launcher-object
-/apps/panel/objects/twitter_launcher0/position 4
-/apps/panel/objects/twitter_launcher0/toplevel_id top_panel
+/apps/panel/objects/twitter_launcher0/object_type launcherobject
+/apps/panel/objects/twitter_launcher0/position 3
+/apps/panel/objects/twitter_launcher0/toplevel_id bottom_panel
 
 /apps/panel/applets/show_desktop0/bonobo_iid OAFIID:GNOME_ShowDesktopApplet
 /apps/panel/applets/show_desktop0/locked true
-/apps/panel/applets/show_desktop0/position 0
-/apps/panel/applets/show_desktop0/object_type bonobo-applet
+/apps/panel/applets/show_desktop0/position 1
+/apps/panel/applets/show_desktop0/object_type bonoboapplet
 /apps/panel/applets/show_desktop0/toplevel_id bottom_panel
 
 /apps/panel/applets/window_list0/bonobo_iid OAFIID:GNOME_WindowListApplet
 /apps/panel/applets/window_list0/locked true
-/apps/panel/applets/window_list0/position 1
-/apps/panel/applets/window_list0/object_type bonobo-applet
+/apps/panel/applets/window_list0/position 4
+/apps/panel/applets/window_list0/object_type bonoboapplet
 /apps/panel/applets/window_list0/toplevel_id bottom_panel
-
-/apps/panel/applets/workspace_switch0/bonobo_iid OAFIID:GNOME_WorkspaceSwitcherApplet
-/apps/panel/applets/workspace_switch0/locked true
-/apps/panel/applets/workspace_switch0/position 2
-/apps/panel/applets/workspace_switch0/panel_right_stick true
-/apps/panel/applets/workspace_switch0/object_type bonobo-applet
-/apps/panel/applets/workspace_switch0/toplevel_id bottom_panel
 
 /apps/panel/applets/mixer0/bonobo_iid OAFIID:GNOME_MixerApplet
 /apps/panel/applets/mixer0/locked true
 /apps/panel/applets/mixer0/position 5
 /apps/panel/applets/mixer0/panel_right_stick true
-/apps/panel/applets/mixer0/object_type bonobo-applet
-/apps/panel/applets/mixer0/toplevel_id top_panel
+/apps/panel/applets/mixer0/object_type bonoboapplet
+/apps/panel/applets/mixer0/toplevel_id bottom_panel
 
 /apps/panel/applets/clock0/bonobo_iid OAFIID:GNOME_ClockApplet
 /apps/panel/applets/clock0/locked true
-/apps/panel/applets/clock/prefs/show_date false
+/apps/panel/applets/clock0/prefs/show_date false
 /apps/panel/applets/clock0/position 6
 /apps/panel/applets/clock0/panel_right_stick true
-/apps/panel/applets/clock0/object_type bonobo-applet
-/apps/panel/applets/clock0/toplevel_id top_panel
+/apps/panel/applets/clock0/object_type bonoboapplet
+/apps/panel/applets/clock0/toplevel_id bottom_panel
 
 /apps/panel/applets/notification_area0/bonobo_iid OAFIID:GNOME_NotificationAreaApplet
 /apps/panel/applets/notification_area0/locked true
 /apps/panel/applets/notification_area0/position 7
 /apps/panel/applets/notification_area0/panel_right_stick true
-/apps/panel/applets/notification_area0/object_type bonobo-applet
-/apps/panel/applets/notification_area0/toplevel_id top_panel
+/apps/panel/applets/notification_area0/object_type bonoboapplet
+/apps/panel/applets/notification_area0/toplevel_id bottom_panel
 
+/apps/panel/toplevels/disable_movement true
 /apps/panel/toplevels/disable_movement true

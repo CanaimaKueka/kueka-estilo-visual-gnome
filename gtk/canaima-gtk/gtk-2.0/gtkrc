@@ -25,7 +25,7 @@
 #  bg[NORMAL] is trough color
 #  bg[SELECTED] is fill color
 
-gtk_color_scheme = "fg_color:#333333\nbg_color:#ece9d8\nbase_color:#FFFFFF\ntext_color:#333333\nselected_bg_color:#c8dd9d\nselected_fg_color:#FFFFFF\ntooltip_fg_color:#EEEEEE\ntooltip_bg_color:#222222"
+gtk_color_scheme = "fg_color:#333333\nbg_color:#ece9d8\nbase_color:#FFFFFF\ntext_color:#333333\nselected_bg_color:#A0C25A\nselected_fg_color:#FFFFFF\ntooltip_fg_color:#EEEEEE\ntooltip_bg_color:#222222"
 gtk-icon-sizes = "panel-menu=24,24:panel=22,22:gtk-button=16,16:gtk-large-toolbar=22,22"
 
 gtk-auto-mnemonics = 1

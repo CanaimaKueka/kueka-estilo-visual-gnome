@@ -5,10 +5,7 @@
 # ARCHIVO: postinst
 # DESCRIPCIÓN: Configura el sistema despues la instalación del paquete.
 # COPYRIGHT:
-#  (C) 2010 Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>
-#  (C) 2010 Diego Alberto Aguilera Zambrano <daguilera85@gmail.com>
-#  (C) 2010 Carlos Alejandro Guerrero Mora <guerrerocarlos@gmail.com>
-#  (C) 2010 Francisco Javier Vásquez Guerrero <franjvasquezg@gmail.com>
+#  (C) 2010 Randy Ortega <ortega571@gmail.com>
 # LICENCIA: GPL3
 # ==============================================================================
 #
@@ -45,18 +42,8 @@ case ${1} in
 
 	ADVERTENCIA "Migrando Grub a Burg ..."
 
-	[ ! -e /usr/sbin/update-burg ] && echo "#!/bin/bash" > /usr/sbin/update-burg
-	chmod +x /usr/sbin/update-burg
-
-	if [ -e /usr/sbin/update-grub ]; then
-		mv /usr/sbin/update-grub /usr/sbin/update-grub.backup
-		ln -s /usr/sbin/update-burg /usr/sbin/update-grub
-	fi
-
-	if [ -e /usr/sbin/update-grub2 ]; then
-		mv /usr/sbin/update-grub2 /usr/sbin/update-grub2.backup
-		ln -s /usr/sbin/update-burg /usr/sbin/update-grub2
-	fi
+	update-alternatives --install /usr/sbin/update-grub bootloader /usr/sbin/update-burg 90
+	update-alternatives --install /usr/sbin/update-grub2 bootloader2 /usr/sbin/update-burg 90
 
 	if [ $( cat /etc/kernel-img.conf | grep "postinst_hook = update-burg" | wc -l ) == 0 ];	then
 		echo "postinst_hook = update-burg" >> /etc/kernel-img.conf
@@ -73,13 +60,13 @@ case ${1} in
 	fi
 
 	if [ -e /etc/burg.d/10_linux ]; then
-		sed -i 's/%s, with Linux %s (recovery mode)/%s (Restaurar)/g' /etc/burg.d/10_linux
+		sed -i 's/%s, with Linux %s (recovery mode)/%s (Consola)/g' /etc/burg.d/10_linux
 		sed -i 's/%s, with Linux %s/%s/g' /etc/burg.d/10_linux
                 sed -i 's/"${os}" //g' /etc/burg.d/10_linux
 	fi
 
 	if [ -e /etc/gdm3/greeter.gconf-defaults ]; then
-		sed -i 's/\/apps\/gdm\/simple-greeter\/logo_icon_name.*/\/apps\/gdm\/simple-greeter\/logo_icon_name\t\tstart-here/g' /etc/gdm3/greeter.gconf-defaults
+		sed -i 's|/apps/gdm/simple-greeter/logo_icon_name.*|/apps/gdm/simple-greeter/logo_icon_name\t\tstart-here|g' /etc/gdm3/greeter.gconf-defaults
 	fi
 
 	;;
