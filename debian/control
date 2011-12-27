@@ -11,7 +11,7 @@ Vcs-Browser: http://gitorious.org/canaima-gnu-linux/canaima-estilo-visual-gnome/
 
 Package: canaima-estilo-visual-gnome
 Architecture: all
-Depends:	gtk2-engines,
+Depends:	gtk2-engines (>= 1:2.20),
 		gtk2-engines-pixbuf,
 		gtk2-engines-equinox,
 		canaima-estilo-visual-iconos-gnome (>= 3.1),
