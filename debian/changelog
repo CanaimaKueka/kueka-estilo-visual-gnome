@@ -1,3 +1,9 @@
+canaima-estilo-visual-gnome (3.1-12) stable; urgency=low
+
+  * [ae10a4f] Ajustando versiones de las dependencias
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 27 Dec 2011 18:31:08 -0430
+
 canaima-estilo-visual-gnome (3.1-11) stable; urgency=low
 
   * [c117019] Agregando Provides: gnome-themes a debian/control para
