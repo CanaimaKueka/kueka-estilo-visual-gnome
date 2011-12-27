@@ -1,3 +1,10 @@
+canaima-estilo-visual-gnome (3.1-10) stable; urgency=low
+
+  * [91109e4] Agregando Provides: canaima-estilo-visual a debian/control
+    para forzar remoción automática en actualizaciones de Canaima 3.0
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 27 Dec 2011 14:03:59 -0430
+
 canaima-estilo-visual-gnome (3.1-9) stable; urgency=low
 
   * [21f507d] Agregando dependencias a burg y conflicts con grub
