@@ -2,10 +2,8 @@
 #
 # ==============================================================================
 # PAQUETE: canaima-estilo-visual-gnome
-# ARCHIVO: postrm
-# DESCRIPCIÓN: Revierte los cambios hechos por el paquete en los scripts del
-#              mantenedor, de forma tal de asegurarse que el sistema quede
-#              como estaba antes de su instalación.
+# ARCHIVO: prerm
+# DESCRIPCIÓN: Prepara el sistema para que el paquete sea removido.
 # COPYRIGHT:
 #  (C) 2010 Randy Ortega <ortega571@gmail.com>
 # LICENCIA: GPL3
@@ -18,17 +16,21 @@ PKG="canaima-estilo-visual-gnome"
 
 case ${1} in
 
-        purge|upgrade|remove|failed-upgrade|abort-install|abort-upgrade|disappear)
+	remove|upgrade|deconfigure)
 
 		update-alternatives --remove bootloader /usr/sbin/update-burg
 		update-alternatives --remove bootloader2 /usr/sbin/update-burg
+
 	;;
 
-        *)
+	failed-upgrade)
+	;;
 
-                echo "postrm no reconoce el argumento '"${1}"'" >&2
-                exit 1
-        ;;
+	*)
+
+		echo "prerm no reconoce el argumento '"${1}"'" >&2
+		exit 1
+	;;
 
 esac
 

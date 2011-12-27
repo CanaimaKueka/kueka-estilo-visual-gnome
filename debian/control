@@ -22,9 +22,9 @@ Depends:	gtk2-engines,
 		${misc:Depends}
 Pre-Depends: gdm3
 Recommends: burg, canaima-mod-burg
-Replaces: canaima-estilo-visual
-Conflicts: canaima-estilo-visual
-Provides: canaima-estilo-visual
+Replaces: canaima-estilo-visual, gnome-themes
+Conflicts: canaima-estilo-visual, gnome-themes
+Provides: canaima-estilo-visual, gnome-themes
 Description: Estilo visual de Canaima para GNOME
  Este paquete provee el estilo visual (tema de GTK, metacity,
  fondos de escritorio y BURG) para Canaima GNU/Linux.
