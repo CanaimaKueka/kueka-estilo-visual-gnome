@@ -3,8 +3,9 @@ canaima-estilo-visual-gnome (3.1-11) stable; urgency=low
   * [c117019] Agregando Provides: gnome-themes a debian/control para
     forzar remoción automática en actualizaciones de Canaima 3.0
   * [4d971ba] Corrigiendo error en el Makefile
+  * [b9c90a6] Removiendo residuos de compilación
 
- -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 27 Dec 2011 14:43:27 -0430
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Tue, 27 Dec 2011 14:46:31 -0430
 
 canaima-estilo-visual-gnome (3.1-10) stable; urgency=low
 
