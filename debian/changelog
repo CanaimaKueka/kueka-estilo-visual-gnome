@@ -1,3 +1,10 @@
+canaima-estilo-visual-gnome (3.1-13) stable; urgency=low
+
+  * [3bf5570] Agregando paquetes transicionales para facilitar la
+    migración de Canaima 3.0 -> Canaima 3.1
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Wed, 28 Dec 2011 22:53:09 -0430
+
 canaima-estilo-visual-gnome (3.1-12) stable; urgency=low
 
   * [ae10a4f] Ajustando versiones de las dependencias
