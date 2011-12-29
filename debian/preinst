@@ -18,7 +18,7 @@ case ${1} in
 
 	install|upgrade)
 
-		if [ ${2} < 3.1 ]; then
+		if dpkg --compare-versions "${2}" lt 3.1; then
 
 			# Para cada usuario en /home/ ...
 			for HOME_U in /home/*?; do
