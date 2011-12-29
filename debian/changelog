@@ -1,3 +1,9 @@
+canaima-estilo-visual-gnome (3.1-16) stable; urgency=low
+
+  * [0b8ca5c] Corrigiendo bug de generación de la ISO
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Thu, 29 Dec 2011 16:18:02 -0430
+
 canaima-estilo-visual-gnome (3.1-15) stable; urgency=low
 
   * [c2af527] Corrigiendo llaves de gconf-defaults
