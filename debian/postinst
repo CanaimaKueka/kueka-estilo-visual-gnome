@@ -40,6 +40,11 @@ case ${1} in
 
 	configure)
 
+	if [ ! -e /usr/sbin/update-burg ]; then
+		echo "#!/bin/bash" > /usr/sbin/update-burg
+		chmod +x /usr/sbin/update-burg
+	fi
+
 	ADVERTENCIA "Migrando Grub a Burg ..."
 	update-alternatives --install /usr/sbin/update-grub bootloader /usr/sbin/update-burg 90
 	update-alternatives --install /usr/sbin/update-grub2 bootloader2 /usr/sbin/update-burg 90
