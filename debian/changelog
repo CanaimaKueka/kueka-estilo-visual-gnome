@@ -1,8 +1,9 @@
 canaima-estilo-visual-gnome (3.1-15) stable; urgency=low
 
   * [c2af527] Corrigiendo llaves de gconf-defaults
+  * [dc56421] Corrigiendo error en el Makefile
 
- -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Thu, 29 Dec 2011 03:00:55 -0430
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Thu, 29 Dec 2011 03:03:27 -0430
 
 canaima-estilo-visual-gnome (3.1-14) stable; urgency=low
 
