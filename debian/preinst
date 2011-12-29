@@ -18,7 +18,7 @@ case ${1} in
 
 	install|upgrade)
 
-		if [ "$2" < 3.1 ]; then
+		if [ ${2} < 3.1 ]; then
 
 			# Para cada usuario en /home/ ...
 			for HOME_U in /home/*?; do
@@ -30,6 +30,7 @@ case ${1} in
 				if [ $( grep -c "${USUARIO}:.*:.*:.*:.*:.*:::" /etc/shadow ) == 1 ] \
 				&& [ $( grep -c "${USUARIO}:.*:.*:.*:.*:.*:/bin/.*sh" /etc/passwd ) == 1 ] \
 				&& [ -d ${HOME_U}/.config ] \
+				&& [ -d ${HOME_U}/.gconf ] \
 				&& [ -d ${HOME_U} ]; then
 					rm -rf ${HOME_U}/.gconf
 				fi
