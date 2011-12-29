@@ -1,3 +1,9 @@
+canaima-estilo-visual-gnome (3.1-14) stable; urgency=low
+
+  * [8a72c1a] Corrigiendo error en el postinst
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Thu, 29 Dec 2011 01:44:15 -0430
+
 canaima-estilo-visual-gnome (3.1-13) stable; urgency=low
 
   * [3bf5570] Agregando paquetes transicionales para facilitar la
