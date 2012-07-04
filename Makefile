@@ -6,7 +6,7 @@ SCRIPTS = debian/postinst debian/prerm scripts/set-single-panel.sh scripts/set-t
 
 IMAGES = $(shell ls arte/ | grep "\.svg" | sed 's/\.svg//g')
 
-all: build
+all: test build
 
 test:
 
