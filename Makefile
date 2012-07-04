@@ -3,7 +3,6 @@
 SHELL := sh -e
 
 SCRIPTS = debian/postinst debian/prerm scripts/set-single-panel.sh scripts/set-twin-panel.sh
-
 IMAGES = $(shell ls arte/ | grep "\.svg" | sed 's/\.svg//g')
 
 all: test build
@@ -47,7 +46,7 @@ uninstall:
 
 clean:
 
-	@rm arte/*.png
+	@rm -rf arte/*.png
 
 distclean:
 
