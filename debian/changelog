@@ -1,3 +1,11 @@
+canaima-estilo-visual-gnome (3.1-17) stable; urgency=low
+
+  * [4d9a382] Reorganizando ubicación de archivos. Convirtiendo XCF a
+    SVG. Agregando notificación para permitir al usuario elegir entre el
+    estilo de paneles de 3.0 y el nuevo estilo de 3.1.
+
+ -- Luis Alejandro Martínez Faneyth <martinez.faneyth@gmail.com>  Wed, 04 Jul 2012 10:17:37 -0430
+
 canaima-estilo-visual-gnome (3.1-16) stable; urgency=low
 
   * [0b8ca5c] Corrigiendo bug de generación de la ISO
