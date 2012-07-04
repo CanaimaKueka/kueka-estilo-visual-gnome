@@ -1,26 +1,20 @@
-#!/bin/bash -e
+#!/bin/sh -e
 #
 # ==============================================================================
 # PAQUETE: canaima-estilo-visual-gnome
 # ARCHIVO: prerm
 # DESCRIPCIÓN: Prepara el sistema para que el paquete sea removido.
 # COPYRIGHT:
-#  (C) 2010 Randy Ortega <ortega571@gmail.com>
+#  (C) 2010-2012 Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>
 # LICENCIA: GPL3
 # ==============================================================================
 #
 # Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los
 # términos de la Licencia Pública General de GNU (versión 3).
 
-PKG="canaima-estilo-visual-gnome"
-
 case ${1} in
 
 	remove|upgrade|deconfigure)
-
-		update-alternatives --remove bootloader /usr/sbin/update-burg
-		update-alternatives --remove bootloader2 /usr/sbin/update-burg
-
 	;;
 
 	failed-upgrade)

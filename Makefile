@@ -2,43 +2,52 @@
 
 SHELL := sh -e
 
-SCRIPTS =	"debian/postinst configure" \
-		"debian/prerm remove"
+SCRIPTS = debian/postinst debian/prerm scripts/set-single-panel.sh scripts/set-twin-panel.sh
+
+IMAGES = $(shell ls arte/ | grep "\.svg" | sed 's/\.svg//g')
 
 all: build
 
 test:
 
-	@echo -n "\n===== Comprobando posibles errores de sintaxis en los scripts de mantenedor =====\n"
-
-	@for SCRIPT in $(SCRIPTS); \
-	do \
-		echo -n "$${SCRIPT}\n"; \
-		bash -n $${SCRIPT}; \
+	@printf "Comprobando sintaxis de los scripts de shell ["
+	@for SCRIPT in $(SCRIPTS); do \
+		sh -n $${SCRIPT}; \
+		checkbashisms -f -x $${SCRIPT} || true; \
+		printf "."; \
 	done
-
-	@echo -n "¡TODO BIEN!\n=================================================================================\n\n"
+	@printf "]\n"
 
 build:
 
-	@echo "Nada para compilar!"
+	@printf "Generando imágenes desde las fuentes [SVG > PNG,ICO] ["
+	@for IMAGE in $(IMAGES); do \
+		convert -background None arte/$${IMAGE}.svg \
+			arte/$${IMAGE}.png; \
+		printf "."; \
+	done
+	@printf "]\n"
 
 install:
 
-	mkdir -p $(DESTDIR)/usr/share/themes/
-	cp -r metacity/canaima-metacity $(DESTDIR)/usr/share/themes/
-	cp -r gtk/canaima-gtk $(DESTDIR)/usr/share/themes/
-
-	mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/arte/
-	cp -r arte/*.png $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/arte/
+	@mkdir -p $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/arte/
+	@mkdir -p $(DESTDIR)/etc/xdg/autostart/
+	@mkdir -p $(DESTDIR)/usr/share/themes/
+	@cp -r canaima-metacity canaima-gtk $(DESTDIR)/usr/share/themes/
+	@cp -r change-panels.desktop $(DESTDIR)/etc/xdg/autostart/
+	@cp -r scripts/*.py scripts/*.sh $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/
+	@cp -r arte/*.png $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/arte/
 
 uninstall:
 
-	rm -rf $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/
-	rm -rf $(DESTDIR)/usr/share/themes/canaima-metacity/
-	rm -rf $(DESTDIR)/usr/share/themes/canaima-gtk/
+	@rm -rf $(DESTDIR)/usr/share/canaima-estilo-visual-gnome/
+	@rm -rf $(DESTDIR)/usr/share/themes/canaima-metacity/
+	@rm -rf $(DESTDIR)/usr/share/themes/canaima-gtk/
+	@rm -rf $(DESTDIR)/etc/xdg/autostart/change-panels.desktop
 
 clean:
+
+	@rm arte/*.png
 
 distclean:
 

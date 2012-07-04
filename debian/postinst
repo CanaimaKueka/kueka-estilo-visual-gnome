@@ -1,106 +1,58 @@
-#!/bin/bash -e
+#!/bin/sh -e
 #
 # ==============================================================================
 # PAQUETE: canaima-estilo-visual-gnome
 # ARCHIVO: postinst
 # DESCRIPCIÓN: Configura el sistema despues la instalación del paquete.
 # COPYRIGHT:
-#  (C) 2010 Randy Ortega <ortega571@gmail.com>
+#  (C) 2010-2012 Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>
 # LICENCIA: GPL3
 # ==============================================================================
 #
 # Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los
 # términos de la Licencia Pública General de GNU (versión 3).
 
-PKG="canaima-estilo-visual-gnome"
-# Color Verde
-VERDE="\e[1;32m"
-# Color Rojo
-ROJO="\e[1;31m"
-# Color Amarillo
-AMARILLO="\e[1;33m"
-# Negrita
-BOLD="\e[1m"
-# Caracter de fin de línea
-FIN="\e[0m"
-
-function ERROR() {
-echo -e ${ROJO}${1}${FIN}
+ERROR() {
+	echo -e "\033[1,31m${1}\033[0m"
 }
 
-function ADVERTENCIA() {
-echo -e ${AMARILLO}${1}${FIN}
+ADVERTENCIA() {
+	echo -e "\033[1,33m${1}\033[0m"
 }
 
-function EXITO() {
-echo -e ${VERDE}${1}${FIN}
+EXITO() {
+	echo -e "\033[1,32m${1}\033[0m"
 }
 
 case ${1} in
-
-	configure)
-
-	if [ ! -e /usr/sbin/update-burg ]; then
-		echo "#!/bin/bash" > /usr/sbin/update-burg
-		chmod +x /usr/sbin/update-burg
-	fi
-
-	ADVERTENCIA "Migrando Grub a Burg ..."
-	update-alternatives --install /usr/sbin/update-grub bootloader /usr/sbin/update-burg 90
-	update-alternatives --install /usr/sbin/update-grub2 bootloader2 /usr/sbin/update-burg 90
-
-	if [ $( cat /etc/kernel-img.conf | grep "postinst_hook = update-burg" | wc -l ) == 0 ];	then
-		echo "postinst_hook = update-burg" >> /etc/kernel-img.conf
-		echo "postrm_hook = update-burg" >> /etc/kernel-img.conf
-	fi
-
-	if [ -e /etc/default/burg ]; then
-		sed -i 's/GRUB_GFXMODE=.*/GRUB_GFXMODE=1024x768/g' /etc/default/burg
-		sed -i 's/GRUB_THEME=.*/GRUB_THEME=radiancetext/g' /etc/default/burg
-		sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=3/g' /etc/default/burg
-		sed -i 's/GRUB_DISTRIBUTOR=.*/GRUB_DISTRIBUTOR="Canaima"/g' /etc/default/burg
-		sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash vga=791"/g' /etc/default/burg
-		sed -i 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX=""/g' /etc/default/burg
-	fi
-
-	if [ -e /etc/burg.d/10_linux ]; then
-		sed -i 's/%s, with Linux %s (recovery mode)/%s (Consola)/g' /etc/burg.d/10_linux
-		sed -i 's/%s, with Linux %s/%s/g' /etc/burg.d/10_linux
-                sed -i 's/"${os}" //g' /etc/burg.d/10_linux
-	fi
+	configure|'')
 
 	if [ -e /etc/gdm3/greeter.gconf-defaults ]; then
 		sed -i 's|/apps/gdm/simple-greeter/logo_icon_name.*|/apps/gdm/simple-greeter/logo_icon_name\t\tstart-here|g' /etc/gdm3/greeter.gconf-defaults
 	fi
 
 	if dpkg --compare-versions "${2}" lt 3.1; then
-
 		# Para cada usuario en /home/ ...
 		for HOME_U in /home/*?; do
-
 			# Obteniendo sólo el nombre del usuario
 			USUARIO=$( basename ${HOME_U} )
-
 			# Y en caso de que el usuario sea un usuario activo (existente en /etc/shadow) ...
-			if [ $( grep -c "${USUARIO}:.*:.*:.*:.*:.*:::" /etc/shadow ) == 1 ] \
-			&& [ $( grep -c "${USUARIO}:.*:.*:.*:.*:.*:/bin/.*sh" /etc/passwd ) == 1 ] \
+			if [ $( grep -c "${USUARIO}:.*:.*:.*:.*:.*:::" /etc/shadow ) -eq 1 ] \
+			&& [ $( grep -c "${USUARIO}:.*:.*:.*:.*:.*:/bin/.*sh" /etc/passwd ) -eq 1 ] \
 			&& [ -d ${HOME_U}/.gconf ] \
 			&& [ -d ${HOME_U} ]; then
 				rm -rf ${HOME_U}/.gconf
 			fi
 		done
 	fi
-
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)
 	;;
 
 	*)
-
 		ERROR "postinst no reconoce el argumento '"${1}"'" >&2
 		exit 1
-
 	;;
 
 esac

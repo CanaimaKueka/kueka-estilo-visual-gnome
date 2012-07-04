@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Configuración de los paneles
+Name[es_VE]=Configuración de los paneles
+GenericName=Configuración de los paneles
+GenericName[es_VE]=Configuración de los paneles
+Comment=Cambia la orientación de los paneles de escritorio
+Comment[es_VE]=Cambia la orientación de los paneles de escritorio
+Exec=python /usr/share/canaima-estilo-visual-gnome/change-panels.py
+Terminal=false
+Type=Application
+StartupNotify=true
+Icon=/usr/share/icons/canaima-iconos/places/48/desktop.png
+Categories=GNOME;GTK;Utility;
+X-GNOME-FullName=Configuración de los paneles
+X-GNOME-FullName[es]=Configuración de los paneles

@@ -1,9 +1,8 @@
 Source: canaima-estilo-visual-gnome
 Section: misc
 Priority: optional
-Maintainer: Equipo de Desarrollo de Canaima GNU/Linux <desarrolladores@canaima.softwarelibre.gob.ve>
-Uploaders: Randy Ortega <ortega571@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~)
+Maintainer: Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>
+Build-Depends: debhelper (>= 7.0.50~), devscripts, imagemagick, libmagickcore3-extra
 Standards-Version: 3.9.1
 Homepage: http://canaima.softwarelibre.gob.ve/
 Vcs-Git: git://gitorious.org/canaima-gnu-linux/canaima-estilo-visual-gnome.git
