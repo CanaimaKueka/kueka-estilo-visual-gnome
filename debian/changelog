@@ -1,3 +1,9 @@
+canaima-estilo-visual-gnome (3.1-19) stable; urgency=low
+
+  * [091a4a0] Corrigiendo errores de lintian
+
+ -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Wed, 04 Jul 2012 10:47:00 -0430
+
 canaima-estilo-visual-gnome (3.1-18) stable; urgency=low
 
   * [dfcf587] Corrigiendo errores de lintian
