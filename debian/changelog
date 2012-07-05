@@ -1,3 +1,9 @@
+canaima-estilo-visual-gnome (3.1-20) stable; urgency=low
+
+  * [2884874] Corrigiendo detalles en el paquete fuente.
+
+ -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Thu, 05 Jul 2012 14:08:40 -0430
+
 canaima-estilo-visual-gnome (3.1-19) stable; urgency=low
 
   * [091a4a0] Corrigiendo errores de lintian
