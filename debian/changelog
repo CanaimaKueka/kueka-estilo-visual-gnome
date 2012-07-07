@@ -1,3 +1,15 @@
+canaima-estilo-visual-gnome (3.1-21) stable; urgency=low
+
+  [ Erick Birbe ]
+  * [a3e072f] Eliminando el reinicio automatico de sesion para corregir
+    error en modo live
+
+  [ Luis Alejandro Martínez Faneyth ]
+  * [7cc3537] Eliminando el reinicio automatico de sesion para corregir
+    error en modo live
+
+ -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Sat, 07 Jul 2012 01:39:43 -0430
+
 canaima-estilo-visual-gnome (3.1-20) stable; urgency=low
 
   * [2884874] Corrigiendo detalles en el paquete fuente.
