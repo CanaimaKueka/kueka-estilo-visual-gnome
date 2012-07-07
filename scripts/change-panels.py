@@ -72,7 +72,8 @@ def no_preguntar(n, action):
 
 def cerrar_sesion():
 	notificacion_reinicio()
-	os.system('/usr/bin/gnome-session-save --kill')
+	#TODO: lograr que se reinicie la sesion solo si el usuario lo indica
+	#os.system('/usr/bin/gnome-session-save --kill')
 
 def notificacion_cambiar():
 	pynotify.init(NOMBRE_PAQUETE)
