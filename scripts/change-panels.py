@@ -16,6 +16,9 @@ config_dir = HOMEDIR + '/.config/' + NOMBRE_PAQUETE
 config_file_path = config_dir + '/panel.conf'
 config_file = None
 
+def es_modo_live():
+    return os.path.isdir("/live/image")
+
 def iniciar_configuracion():
 
 	if not os.path.exists(config_file_path):
@@ -72,13 +75,12 @@ def no_preguntar(n, action):
 
 def cerrar_sesion():
 	notificacion_reinicio()
-	# TODO: lograr que se reinicie la sesion solo si el usuario lo indica
-	#os.system('/usr/bin/gnome-session-save --kill')
+	os.system('/usr/bin/gnome-session-save --kill')
 
 def notificacion_cambiar():
 	pynotify.init(NOMBRE_PAQUETE)
-	loop=gobject.MainLoop()
-	n=pynotify.Notification(
+	loop = gobject.MainLoop()
+	n = pynotify.Notification(
 		"¿Te gusta como se ve el panel?",
 		"Esta versión de Canaima viene con nueva disposición de paneles, si lo prefieres puedes escojer entre las siguientes opciones:"
 	)
@@ -92,7 +94,7 @@ def notificacion_cambiar():
 
 def notificacion_reinicio():
 	pynotify.init(NOMBRE_PAQUETE)
-	n=pynotify.Notification(
+	n = pynotify.Notification(
 		"Cerrar la sesión",
 		"Para aplicar todos los cambios es posible que necesites volver a iniciar tu sesion de usuario."
 	)
@@ -110,4 +112,6 @@ def main():
 			notificacion_cambiar()
 
 if __name__ == '__main__':
-	main()
+
+    if not es_modo_live():
+	   main()
