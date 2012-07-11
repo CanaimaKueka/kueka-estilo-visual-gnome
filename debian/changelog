@@ -12,8 +12,10 @@ canaima-estilo-visual-gnome (3.1-21) stable; urgency=low
   * [edeb2d3] Condicionando el cambiador de panel para que no se ejecute
     en modo liveCD
   * [d310747] Colocando descripcion a la funcion es_modo_live()
+  * [37e6aa9] Corrigiendo la obtencion del directorio de scripts (ticket
+    #491)
 
- -- Erick Birbe <erickcion@gmail.com>  Wed, 11 Jul 2012 14:36:21 -0430
+ -- Erick Birbe <erickcion@gmail.com>  Wed, 11 Jul 2012 16:00:16 -0430
 
 canaima-estilo-visual-gnome (3.1-20) stable; urgency=low
 
