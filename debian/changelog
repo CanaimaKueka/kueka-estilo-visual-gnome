@@ -8,7 +8,12 @@ canaima-estilo-visual-gnome (3.1-21) stable; urgency=low
   * [7cc3537] Eliminando el reinicio automatico de sesion para corregir
     error en modo live
 
- -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Sat, 07 Jul 2012 01:39:43 -0430
+  [ Erick Birbe ]
+  * [edeb2d3] Condicionando el cambiador de panel para que no se ejecute
+    en modo liveCD
+  * [d310747] Colocando descripcion a la funcion es_modo_live()
+
+ -- Erick Birbe <erickcion@gmail.com>  Wed, 11 Jul 2012 14:36:21 -0430
 
 canaima-estilo-visual-gnome (3.1-20) stable; urgency=low
 
