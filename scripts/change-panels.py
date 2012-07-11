@@ -17,6 +17,7 @@ config_file_path = config_dir + '/panel.conf'
 config_file = None
 
 def es_modo_live():
+    'Verifica si el entorno de ejecucion es un LiveCD'
     return os.path.isdir("/live/image")
 
 def iniciar_configuracion():
