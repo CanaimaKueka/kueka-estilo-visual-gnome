@@ -19,6 +19,7 @@ Depends:	python,
 		canaima-plymouth,
 		canaima-salvapantalla,
 		canaima-escritorio-gnome (>= 3.1),
+		${python:Depends},
 		${shlibs:Depends},
 		${misc:Depends}
 Pre-Depends: gdm3

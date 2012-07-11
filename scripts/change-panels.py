@@ -8,7 +8,7 @@ import pynotify
 import sys
 
 NOMBRE_PAQUETE = "canaima-estilo-visual-gnome"
-WORKDIR = os.path.dirname(os.path.abspath(os.getcwd()))
+WORKDIR = sys.path[0]
 HOMEDIR = os.environ["HOME"]
 
 Config = ConfigParser.ConfigParser()
