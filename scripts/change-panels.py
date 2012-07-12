@@ -49,7 +49,7 @@ def leer_configuracion(seccion, clave, tipo=None):
 	return None
 
 def escribir_configuracion(seccion, clave, valor):
-
+	'Escribe un valor en el archivo de configuracion'
 	iniciar_configuracion()
 
 	# Armamos la estructura del archivo
