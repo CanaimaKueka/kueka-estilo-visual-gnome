@@ -17,8 +17,8 @@
 /desktop/gnome/url-handlers/mailto/command	"guacharo"
 /desktop/gnome/applications/media/exec		"exaile"
 
-/desktop/gnome/peripherals/keyboard/xkb/model pc105
-/desktop/gnome/peripherals/keyboard/kbd/layouts '[latam,es]'
+#/desktop/gnome/peripherals/keyboard/xkb/model pc105
+#/desktop/gnome/peripherals/keyboard/kbd/layouts '[latam,es]'
 /apps/metacity/global_keybindings/show_desktop Super_R
 /apps/metacity/global_keybindings/panel_main_menu Super_L
 /apps/nautilus/preferences/always_use_browser true
