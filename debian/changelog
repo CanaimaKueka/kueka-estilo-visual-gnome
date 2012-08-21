@@ -1,9 +1,15 @@
 canaima-estilo-visual-gnome (3.1-22) stable; urgency=low
 
+  [ Erick Birbe ]
   * [7a7f869] Comentario, cambio menor para subir numero de version con
     c-d
 
- -- Erick Birbe <erickcion@gmail.com>  Thu, 12 Jul 2012 10:56:03 -0430
+  [ Luis Alejandro Martínez Faneyth ]
+  * [484a0bb] Corrigiendo comportamiento de las distribuciones del
+    teclado, sugerido en el ticket #426. Gracias a Miguel Alvarado (aka
+    Exodus).
+
+ -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Tue, 21 Aug 2012 10:31:09 -0430
 
 canaima-estilo-visual-gnome (3.1-21) stable; urgency=low
 
