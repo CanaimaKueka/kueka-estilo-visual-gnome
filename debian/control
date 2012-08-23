@@ -25,7 +25,7 @@ Depends:	python,
 Pre-Depends: gdm3
 Recommends: burg, canaima-mod-burg
 Conflicts: canaima-estilo-visual (<< 3.1), gnome-themes (<< 3)
-Replaces: canaima-estilo-visual (<< 3.1), gnome-themes  (<< 3)
+Replaces: canaima-estilo-visual (<< 3.1), gnome-themes (<< 3)
 Provides: canaima-estilo-visual, gnome-themes
 Description: Estilo visual de Canaima para GNOME
  Este paquete provee el estilo visual (tema de GTK, metacity,
