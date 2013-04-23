@@ -3,11 +3,5 @@
 %:
 	dh ${@}
 
-override_dh_auto_build:
-	$(MAKE) DESTDIR=$(CURDIR)/debian/canaima-estilo-visual-gnome build
-
-override_dh_auto_install:
-	$(MAKE) DESTDIR=$(CURDIR)/debian/canaima-estilo-visual-gnome install
-
 override_dh_installgsettings:
 	dh_installgsettings --priority=20
