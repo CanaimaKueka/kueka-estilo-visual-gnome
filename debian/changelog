@@ -1,9 +1,13 @@
 canaima-estilo-visual-gnome (4.0) stable; urgency=low
 
+  [ Luis Alejandro Martínez Faneyth ]
   * [1d5c576] Removiendo temas viejos GTK, Metacity. Removiendo configuraciones gconf por defecto. Removiendo artes de banners. Removiendo scripts de cambios de paneles. Agregando configuraciones gsettings por defecto. Agregando dependencias a paquetes de temas por separado.
   * [a4abaa3] Removiendo rutinas de copia de archivos.
 
- -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Tue, 23 Apr 2013 09:54:09 -0430
+  [ Erick Birbe ]
+  * [4868080] Eliminando opción de compresión en xz
+
+ -- Erick Birbe <erickcion@gmail.com>  Tue, 23 Apr 2013 16:15:55 -0430
 
 canaima-estilo-visual-gnome (3.1-23) stable; urgency=low
 
