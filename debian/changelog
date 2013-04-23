@@ -1,10 +1,12 @@
-canaima-estilo-visual-gnome (4.0~1.gbp1d5c57) UNRELEASED; urgency=low
+canaima-estilo-visual-gnome (4.0~1.gbpa4abaa) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @1d5c576902e42d6471ddfb4bbb52cfe1461be20a **
+  ** SNAPSHOT build @a4abaa304ffb7475859afde45d5f94d28bc3fd7e **
 
   * [1d5c576] Removiendo temas viejos GTK, Metacity. Removiendo configuraciones gconf por defecto. Removiendo artes de banners. Removiendo scripts de cambios de paneles. Agregando configuraciones gsettings por defecto. Agregando dependencias a paquetes de temas por separado.
+  * [cfa314b] Update changelog for 4.0~1.gbp1d5c57 release
+  * [a4abaa3] Removiendo rutinas de copia de archivos.
 
- -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Tue, 23 Apr 2013 09:48:05 -0430
+ -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Tue, 23 Apr 2013 09:52:14 -0430
 
 canaima-estilo-visual-gnome (3.1-23) stable; urgency=low
 
