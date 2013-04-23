@@ -1,0 +1,29 @@
+[org.gnome.desktop.interface]
+gtk-theme='Gnamon'
+icon-theme='Gnamon'
+font-name='Jara 12'
+cursor-theme='GnamonCur'
+monospace-font-name='Monospace 11'
+document-font-name='Sans 11'
+buttons-have-icons=true
+menus-have-icons=true
+
+[org.gnome.desktop.shell.overrides]
+button-layout=':minimize,maximize,close'
+
+[org.gnome.desktop.wm.preferences]
+theme='Gnamon'
+
+[org.gnome.shell.extensions.SettingsCenter]
+label-menu="Configuración del Sistema"
+replace-ss-menu=true
+items='Advanced Settings;gnome-tweak-tool.desktop;1;gnome-tweak-tool|Desktop Config Editor;dconf-editor.desktop;1;dconf-editor|Gnome Config Editor;gconf-editor.desktop;1;gconf-editor|Session Properties;session-properties.desktop;1;gnome-session-properties|Extensions Preferences;gnome-shell-extension-prefs.desktop;1;gnome-shell-extension-prefs|Passwords and Keys;seahorse.desktop;0;seahorse|NVidia Settings;nvidia-settings.desktop;0;nvidia-settings'
+
+[org.gnome.shell.extensions.showdesktopbutton]
+panel-position-key="left"
+
+[org.gnome.shell.extensions.status-area-horizontal-spacing]
+hpadding=4
+
+[org.gnome.shell.extensions.user-theme]
+name='Gnamon'

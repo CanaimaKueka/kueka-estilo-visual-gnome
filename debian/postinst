@@ -31,7 +31,11 @@ case ${1} in
 		sed -i 's|/apps/gdm/simple-greeter/logo_icon_name.*|/apps/gdm/simple-greeter/logo_icon_name\t\tstart-here|g' /etc/gdm3/greeter.gconf-defaults
 	fi
 
-	if dpkg --compare-versions "${2}" lt 3.1; then
+	if [ -n "$( which glib-compile-schemas )" ] && [ -x "$( which glib-compile-schemas )" ]; then
+		glib-compile-schemas || true
+	fi
+
+	if dpkg --compare-versions "${2}" lt 4.0; then
 		# Para cada usuario en /home/ ...
 		for HOME_U in /home/*?; do
 			# Obteniendo sólo el nombre del usuario
