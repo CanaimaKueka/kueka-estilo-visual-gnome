@@ -1,3 +1,11 @@
+canaima-estilo-visual-gnome (4.0+1) stable; urgency=low
+
+  * [c625ed1] Agregando configuración de extensiones activadas por
+    defecto. Removiendo recompilación de los gschemas (delegado a gnome-
+    shell-extensions-gnamon).
+
+ -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Mon, 06 May 2013 16:18:14 -0430
+
 canaima-estilo-visual-gnome (4.0) stable; urgency=low
 
   [ Luis Alejandro Martínez Faneyth ]
