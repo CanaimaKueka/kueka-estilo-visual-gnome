@@ -27,10 +27,6 @@ EXITO() {
 case ${1} in
 	configure|'')
 
-	if [ -e /etc/gdm3/greeter.gconf-defaults ]; then
-		sed -i 's|/apps/gdm/simple-greeter/logo_icon_name.*|/apps/gdm/simple-greeter/logo_icon_name\t\tstart-here|g' /etc/gdm3/greeter.gconf-defaults
-	fi
-
 	if [ -n "$( which glib-compile-schemas )" ] && [ -x "$( which glib-compile-schemas )" ]; then
 		glib-compile-schemas || true
 	fi
