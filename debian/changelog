@@ -1,5 +1,6 @@
 canaima-estilo-visual-gnome (4.0+1) stable; urgency=low
 
+  * [5303c29] Mejorando opciones de configuración del estilo visual.
   * [c625ed1] Agregando configuración de extensiones activadas por
     defecto. Removiendo recompilación de los gschemas (delegado a gnome-
     shell-extensions-gnamon).
