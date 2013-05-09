@@ -1,3 +1,9 @@
+canaima-estilo-visual-gnome (4.0+2) stable; urgency=low
+
+  * [a6c14b5] Agregando configuración de gsettings para remover el ícono "Computer" del escritorio.
+
+ -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Thu, 09 May 2013 16:23:34 -0430
+
 canaima-estilo-visual-gnome (4.0+1) stable; urgency=low
 
   * [5303c29] Mejorando opciones de configuración del estilo visual.
