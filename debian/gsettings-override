@@ -25,6 +25,7 @@ home-icon-visible=false
 network-icon-visible=false
 trash-icon-visible=false
 volumes-visible=false
+computer-icon-visible=false
 
 [org.gnome.shell]
 enabled-extensions=['axemenu@wheezy', 'message-notifier@shell-extensions.barisione.org', 'removeusername@alex.derhofbauer.at', 'status-area-horizontal-spacing@mathematical.coffee.gmail.com', 'CoverflowAltTab@palatis.blogspot.com', 'Move_Clock@rmy.pobox.com',  'SettingsCenter@xesnet.fr', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'NothingToDo@obsidien.github.com', 'show-desktop@l300lvl.tk', 'windowlist@o2net.cl', 'mediaplayer@patapon.info', 'oldnetworkmanagger@webgyerek.net', 'Shut_Down_Menu@rmy.pobox.com', 'windowoverlay-icons@sustmidown.centrum.cz']
