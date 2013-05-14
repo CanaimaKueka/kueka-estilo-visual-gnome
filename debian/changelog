@@ -1,3 +1,10 @@
+canaima-estilo-visual-gnome (4.0+3) stable; urgency=low
+
+  * [9a3f414] Agregando "Extend Left Box" a la lista de extensiones
+    activadas por defecto.
+
+ -- Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>  Tue, 14 May 2013 13:13:05 -0430
+
 canaima-estilo-visual-gnome (4.0+2) stable; urgency=low
 
   * [a6c14b5] Agregando configuración de gsettings para remover el ícono "Computer" del escritorio.
