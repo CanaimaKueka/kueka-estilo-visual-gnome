@@ -28,15 +28,15 @@ volumes-visible=false
 computer-icon-visible=false
 
 [org.gnome.shell]
-enabled-extensions=['axemenu@wheezy', 'message-notifier@shell-extensions.barisione.org', 'removeusername@alex.derhofbauer.at', 'status-area-horizontal-spacing@mathematical.coffee.gmail.com', 'CoverflowAltTab@palatis.blogspot.com', 'Move_Clock@rmy.pobox.com',  'SettingsCenter@xesnet.fr', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'NothingToDo@obsidien.github.com', 'show-desktop@l300lvl.tk', 'windowlist@o2net.cl', 'mediaplayer@patapon.info', 'oldnetworkmanagger@webgyerek.net', 'Shut_Down_Menu@rmy.pobox.com', 'windowoverlay-icons@sustmidown.centrum.cz']
+enabled-extensions=['axemenu@wheezy', 'message-notifier@shell-extensions.barisione.org', 'removeusername@alex.derhofbauer.at', 'status-area-horizontal-spacing@mathematical.coffee.gmail.com', 'CoverflowAltTab@palatis.blogspot.com', 'Move_Clock@rmy.pobox.com',  'SettingsCenter@xesnet.fr', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'NothingToDo@obsidien.github.com', 'show-desktop@l300lvl.tk', 'windowlist@o2net.cl', 'mediaplayer@patapon.info', 'oldnetworkmanagger@webgyerek.net', 'Shut_Down_Menu@rmy.pobox.com', 'windowoverlay-icons@sustmidown.centrum.cz', 'extend-left-box@linuxdeepin.com']
 
 [org.gnome.shell.extensions.SettingsCenter]
-label-menu="Configuración del Sistema"
+label-menu='Configuración del Sistema'
 replace-ss-menu=true
 items='Advanced Settings;gnome-tweak-tool.desktop;1;gnome-tweak-tool|Desktop Config Editor;dconf-editor.desktop;1;dconf-editor|Gnome Config Editor;gconf-editor.desktop;1;gconf-editor|Session Properties;session-properties.desktop;1;gnome-session-properties|Extensions Preferences;gnome-shell-extension-prefs.desktop;1;gnome-shell-extension-prefs|Passwords and Keys;seahorse.desktop;0;seahorse|NVidia Settings;nvidia-settings.desktop;0;nvidia-settings'
 
 [org.gnome.shell.extensions.showdesktopbutton]
-panel-position-key="left"
+panel-position-key='left'
 
 [org.gnome.shell.extensions.status-area-horizontal-spacing]
 hpadding=4
